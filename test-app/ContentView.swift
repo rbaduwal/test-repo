@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         Text("Hello, world!, this is a test app")
+        Text("part 2 of the testing ")
             .padding()
     }
 }
