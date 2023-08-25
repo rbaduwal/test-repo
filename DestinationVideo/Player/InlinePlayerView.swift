@@ -20,9 +20,9 @@ struct InlinePlayerView: View {
             InlineControlsView()
         }
         .onDisappear {
-            // If this view disappears, and it's not due to switching to fullscreen
+            // If this view disappears, and it's not due to switching to full-window
             // presentation, clear the model's loaded media.
-            if model.presentation != .fullScreen {
+            if model.presentation != .fullWindow {
                 model.reset()
             }
         }

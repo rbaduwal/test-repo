@@ -8,18 +8,19 @@ Custom view modifiers that the app defines.
 import SwiftUI
 
 extension View {
-    #if os(xrOS)
+    #if os(visionOS)
     func updateImmersionOnChange(of path: Binding<[Video]>, isPresentingSpace: Binding<Bool>) -> some View {
         self.modifier(ImmersiveSpacePresentationModifier(navigationPath: path, isPresentingSpace: isPresentingSpace))
     }
     #endif
     
+    // Only used in iOS and tvOS for full-screen modal presentation.
     func fullScreenCoverPlayer(player: PlayerModel) -> some View {
         self.modifier(FullScreenCoverModifier(player: player))
     }
 }
 
-#if os(xrOS)
+#if os(visionOS)
 private struct ImmersiveSpacePresentationModifier: ViewModifier {
     
     @Environment(\.openImmersiveSpace) private var openSpace
@@ -45,7 +46,7 @@ private struct ImmersiveSpacePresentationModifier: ViewModifier {
                         guard !isPresentingSpace else { return }
                         // The navigationPath has one video, or is empty.
                         guard let video = navigationPath.first else { fatalError() }
-                        // Await the request to open the destionation and set the state accordingly.
+                        // Await the request to open the destination and set the state accordingly.
                         switch await openSpace(value: video.destination) {
                         case .opened: isPresentingSpace = true
                         default: isPresentingSpace = false
@@ -85,7 +86,7 @@ private struct FullScreenCoverModifier: ViewModifier {
             }
             // Observe the player's presentation property.
             .onChange(of: player.presentation, { _, newPresentation in
-                isPresentingPlayer = newPresentation == .fullScreen
+                isPresentingPlayer = newPresentation == .fullWindow
             })
     }
 }

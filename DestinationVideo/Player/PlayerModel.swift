@@ -14,8 +14,8 @@ import Observation
 enum Presentation {
     /// Indicates to present the player as a child of a parent user interface.
     case inline
-    /// Indicates to present the player in full-screen exclusive mode.
-    case fullScreen
+    /// Indicates to present the player in full-window exclusive mode.
+    case fullWindow
 }
 
 @Observable class PlayerModel {
@@ -42,7 +42,7 @@ enum Presentation {
     ///
     /// The life cycle of an `AVPlayerViewController` object is different than a typical view controller. In addition
     /// to displaying the player UI within your app, the view controller also manages the presentation of the media
-    /// outside your app UI such as when using AirPlay, Picture in Picture, or docked fullscreen. To ensure the view
+    /// outside your app UI such as when using AirPlay, Picture in Picture, or docked full window. To ensure the view
     /// controller instance is preserved in these cases, the app stores a reference to it here (which
     /// is an environment-scoped object).
     ///
@@ -152,8 +152,8 @@ enum Presentation {
             .filter { $0 != current }
             .sink { [weak self] video in
                 guard let self else { return }
-                // Load the video for fullscreen presentation.
-                loadVideo(video, presentation: .fullScreen)
+                // Load the video for full-window presentation.
+                loadVideo(video, presentation: .fullWindow)
             }
             .store(in: &subscriptions)
     }
@@ -170,7 +170,7 @@ enum Presentation {
         isPlaybackComplete = false
         
         switch presentation {
-        case .fullScreen:
+        case .fullWindow:
             Task { @MainActor in
                 // Attempt to SharePlay this video if a FaceTime call is active.
                 await coordinator.coordinatePlayback(of: video)
@@ -183,10 +183,10 @@ enum Presentation {
             replaceCurrentItem(with: video)
         }
 
-        // In visionOS, configure the spatial experience for either .inline or .fullScreen playback.
+        // In visionOS, configure the spatial experience for either .inline or .fullWindow playback.
         configureAudioExperience(for: presentation)
 
-        // Set the presentation, which typically presents the player full screen.
+        // Set the presentation, which typically presents the player full window.
         self.presentation = presentation
    }
     
@@ -245,15 +245,15 @@ enum Presentation {
     /// Configures the user's intended spatial audio experience to best fit the presentation.
     /// - Parameter presentation: the requested player presentation.
     private func configureAudioExperience(for presentation: Presentation) {
-        #if os(xrOS)
+        #if os(visionOS)
         do {
             let experience: AVAudioSessionSpatialExperience
             switch presentation {
             case .inline:
                 // Set a small, focused sound stage when watching trailers.
                 experience = .headTracked(soundStageSize: .small, anchoringStrategy: .automatic)
-            case .fullScreen:
-                // Set a large sound stage size when viewing fullscreen.
+            case .fullWindow:
+                // Set a large sound stage size when viewing full window.
                 experience = .headTracked(soundStageSize: .large, anchoringStrategy: .automatic)
             }
             try AVAudioSession.sharedInstance().setIntendedSpatialExperience(experience)
@@ -307,13 +307,13 @@ enum Presentation {
             self.player = player
         }
         
-        #if os(xrOS)
+        #if os(visionOS)
         // The app adopts this method to reset the state of the player model when a user
         // taps the back button in the visionOS player UI.
         func playerViewController(_ playerViewController: AVPlayerViewController,
                                   willEndFullScreenPresentationWithAnimationCoordinator coordinator: UIViewControllerTransitionCoordinator) {
             Task { @MainActor in
-                // Calling reset dismisses the fullscreen player.
+                // Calling reset dismisses the full-window player.
                 player.reset()
             }
         }

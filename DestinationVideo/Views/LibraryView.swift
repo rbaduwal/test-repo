@@ -43,6 +43,7 @@ struct LibraryView: View {
                         .padding(.leading, outerPadding)
                         .padding(.bottom, isMobile ? 0 : 8)
                         .frame(height: logoHeight)
+                        .accessibilityHidden(true)
                     
                     // Displays a horizontally scrolling list of Featured videos.
                     VideoListView(title: "Featured",
@@ -67,7 +68,7 @@ struct LibraryView: View {
             .ignoresSafeArea()
             #endif
         }
-        #if os(xrOS)
+        #if os(visionOS)
         // A custom view modifier that presents an immersive space when you navigate to the detail view.
         .updateImmersionOnChange(of: $navigationPath, isPresentingSpace: $isPresentingSpace)
         #endif
@@ -96,5 +97,7 @@ struct LibraryView: View {
 #Preview {
     NavigationStack {
         LibraryView(path: .constant([]))
+            .environment(PlayerModel())
+            .environment(VideoLibrary())
     }
 }

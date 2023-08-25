@@ -16,7 +16,7 @@ struct UpNextView: View {
     
     var body: some View {
         VideoListView(videos: videos, cardStyle: .compact, cardSpacing: isTV ? 50 : 30) { video in
-            model.loadVideo(video, presentation: .fullScreen)
+            model.loadVideo(video, presentation: .fullWindow)
         }
     }
 }

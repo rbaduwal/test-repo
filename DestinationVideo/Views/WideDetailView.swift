@@ -20,10 +20,10 @@ struct WideDetailView: View {
         // Arrange the content in a horizontal layout.
         HStack(alignment: .top, spacing: isTV ? 40 : 20) {
             VStack {
-                // A button that plays the video in a full-screen presentation.
+                // A button that plays the video in a full-window presentation.
                 Button {
-                    /// Load the media item for full-screen presentation.
-                    player.loadVideo(video, presentation: .fullScreen)
+                    /// Load the media item for full-window presentation.
+                    player.loadVideo(video, presentation: .fullWindow)
                 } label: {
                     Label("Play Video", systemImage: "play.fill")
                         .frame(maxWidth: .infinity)

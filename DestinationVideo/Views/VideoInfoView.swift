@@ -54,7 +54,7 @@ struct GenreView: View {
             ForEach(genres, id: \.self) {
                 Text($0)
                     .fixedSize()
-                #if os(xrOS)
+                #if os(visionOS)
                     .font(.caption2.weight(.bold))
                 #else
                     .font(.caption)
@@ -83,7 +83,7 @@ struct RoleView: View {
     }
 }
 
-#if os(xrOS)
+#if os(visionOS)
 #Preview {
     VideoInfoView(video: .preview)
         .padding()

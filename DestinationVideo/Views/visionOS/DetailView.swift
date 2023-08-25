@@ -31,8 +31,8 @@ struct DetailView: View {
                 HStack {
                     Group {
                         Button {
-                            /// Load the media item for full-screen presentation.
-                            player.loadVideo(video, presentation: .fullScreen)
+                            /// Load the media item for full-window presentation.
+                            player.loadVideo(video, presentation: .fullWindow)
                         } label: {
                             Label("Play Video", systemImage: "play.fill")
                                 .frame(maxWidth: .infinity)

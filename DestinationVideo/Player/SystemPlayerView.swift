@@ -28,7 +28,7 @@ struct SystemPlayerView: UIViewControllerRepresentable {
         // Enable PiP on iOS and tvOS.
         controller.allowsPictureInPicturePlayback = true
 
-        #if os(xrOS) || os(tvOS)
+        #if os(visionOS) || os(tvOS)
         // Display an Up Next tab in the player UI.
         if let upNextViewController {
             controller.customInfoViewControllers = [upNextViewController]
@@ -40,7 +40,7 @@ struct SystemPlayerView: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ controller: AVPlayerViewController, context: Context) {
-        #if os(xrOS) || os(tvOS)
+        #if os(visionOS) || os(tvOS)
         Task { @MainActor in
             // Rebuild the list of related video if necessary.
             if let upNextViewController {
@@ -83,8 +83,8 @@ struct SystemPlayerView: UIViewControllerRepresentable {
         guard let nextVideo = library.findVideoInUpNext(after: video) else { return nil }
         
         return UIAction(title: "Play Next", image: UIImage(systemName: "play.fill")) { _ in
-            // Load the video for fullscreen presentation.
-            model.loadVideo(nextVideo, presentation: .fullScreen)
+            // Load the video for full-window presentation.
+            model.loadVideo(nextVideo, presentation: .fullWindow)
         }
     }
 }

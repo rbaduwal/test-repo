@@ -43,25 +43,28 @@ struct VideoListView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: cardSpacing) {
                     ForEach(videos) { video in
-                        // If the app initializes the view with a selection action closure,
-                        // display a video card button that calls it.
-                        if let selectionAction {
-                            Button {
-                                selectionAction(video)
-                            } label: {
-                                VideoCardView(video: video, style: cardStyle)
+                        Group {
+                            // If the app initializes the view with a selection action closure,
+                            // display a video card button that calls it.
+                            if let selectionAction {
+                                Button {
+                                    selectionAction(video)
+                                } label: {
+                                    VideoCardView(video: video, style: cardStyle)
+                                }
+                            }
+                            // Otherwise, create a navigation link.
+                            else {
+                                NavigationLink(value: video) {
+                                    VideoCardView(video: video, style: cardStyle)
+                                }
                             }
                         }
-                        // Otherwise, create a navigation link.
-                        else {
-                            NavigationLink(value: video) {
-                                VideoCardView(video: video, style: cardStyle)
-                            }
-                        }
+                        .accessibilityLabel("\(video.title)")
                     }
                 }
                 .buttonStyle(buttonStyle)
-                // In tvOS, add vertical padding to accomodate card resizing.
+                // In tvOS, add vertical padding to accommodate card resizing.
                 .padding([.top, .bottom], isTV ? 60 : 0)
                 .padding([.leading, .trailing], margins)
             }
@@ -72,7 +75,7 @@ struct VideoListView: View {
     var titleView: some View {
         if let title {
             Text(title)
-            #if os(xrOS)
+            #if os(visionOS)
                 .font(cardStyle == .full ? .largeTitle : .title)
             #elseif os(tvOS)
                 .font(cardStyle == .full ? .largeTitle.weight(.semibold) : .title2)

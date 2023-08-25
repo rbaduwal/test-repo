@@ -34,8 +34,8 @@ struct DetailView: View {
                                      rating: video.info.contentRating,
                                      duration: video.info.duration)
                         Button {
-                            /// Load the media item for full-screen presentation.
-                            player.loadVideo(video, presentation: .fullScreen)
+                            /// Load the media item for full-window presentation.
+                            player.loadVideo(video, presentation: .fullWindow)
                         } label: {
                             Label("Play Video", systemImage: "play.fill")
                                 .fontWeight(.semibold)

@@ -18,10 +18,10 @@ struct ContentView: View {
     @Environment(PlayerModel.self) private var player
     
     var body: some View {
-        #if os(xrOS)
+        #if os(visionOS)
         switch player.presentation {
-        case .fullScreen:
-            // Present the player full screen and begin playback.
+        case .fullWindow:
+            // Present the player full window and begin playback.
             PlayerView()
                 .onAppear {
                     player.play()
@@ -32,7 +32,7 @@ struct ContentView: View {
         }
         #else
         LibraryView(path: $navigationPath)
-            // A custom modifier that shows the player in a fullscreen modal presentation.
+            // A custom modifier that shows the player in a fullscreen modal presentation in iOS and tvOS.
             .fullScreenCoverPlayer(player: player)
         #endif
     }
@@ -41,4 +41,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .environment(PlayerModel())
+        .environment(VideoLibrary())
 }

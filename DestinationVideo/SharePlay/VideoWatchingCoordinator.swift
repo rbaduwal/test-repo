@@ -38,6 +38,17 @@ actor VideoWatchingCoordinator {
             // Clean up the old session, if it exists.
             cleanUpSession(groupSession)
             
+            #if os(visionOS)
+            // Retrieve the new session's system coordinator object to update its configuration.
+            guard let systemCoordinator = await session.systemCoordinator else { continue }
+            
+            // Create a new configuration that enables all participants to share the same immersive space.
+            var configuration = SystemCoordinator.Configuration()
+            configuration.supportsGroupImmersiveSpace = true
+            // Update the coordinator's configuration.
+            systemCoordinator.configuration = configuration
+            #endif
+            
             // Set the app's active group session before joining.
             groupSession = session
             
@@ -105,7 +116,7 @@ actor VideoWatchingCoordinator {
     func coordinatePlayback(of video: Video) async {
         // Exit early if this video is already shared.
         guard video != sharedVideo else { return }
-
+        
         // Create a new activity for the selected video.
         let activity = VideoWatchingActivity(video: video)
         

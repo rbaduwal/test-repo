@@ -22,13 +22,13 @@ struct DestinationVideo: App {
             ContentView()
                 .environment(player)
                 .environment(library)
-            #if !os(xrOS)
+            #if !os(visionOS)
                 // Use a dark color scheme on supported platforms.
                 .preferredColorScheme(.dark)
                 .tint(.white)
             #endif
         }
-        #if os(xrOS)
+        #if os(visionOS)
         // Defines an immersive space to present a destination in which to watch the video.
         ImmersiveSpace(for: Destination.self) { $destination in
             if let destination {
