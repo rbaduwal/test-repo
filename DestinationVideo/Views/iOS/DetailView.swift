@@ -85,5 +85,6 @@ struct DetailView: View {
     NavigationStack {
         DetailView(video: .preview)
             .environment(PlayerModel())
+            .environment(VideoLibrary())
     }
 }
