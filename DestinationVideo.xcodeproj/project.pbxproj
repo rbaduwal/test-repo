@@ -44,7 +44,6 @@
 		46AC02AEC4E46201C147C698 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
 		C417BE472A2EDFE700C8B9CA /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		C41945862A2D9C9C00D0E9BC /* WideDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideDetailView.swift; sourceTree = "<group>"; };
-		C41FF8F129B83A4000ACA6E2 /* MRUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MRUIKit.framework; path = Platforms/XROS.platform/Developer/SDKs/XROS1.0.Internal.sdk/System/Library/PrivateFrameworks/MRUIKit.framework; sourceTree = DEVELOPER_DIR; };
 		C4280E342A16D578005475E1 /* VideoExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoExtensions.swift; sourceTree = "<group>"; };
 		C4462E7129AAAB2E00E3C854 /* Destination Video.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Destination Video.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C455357629EEFE3100A750E8 /* DestinationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationView.swift; sourceTree = "<group>"; };
@@ -110,7 +109,6 @@
 		C41FF8F029B83A4000ACA6E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C41FF8F129B83A4000ACA6E2 /* MRUIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
