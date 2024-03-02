@@ -15,24 +15,13 @@ import SwiftUI
 ///
 struct LibraryView: View {
     
+    @Environment(Immersion.self) private var immersion
     @Environment(PlayerModel.self) private var model
     @Environment(VideoLibrary.self) private var library
-    
-    /// A path that represents the user's content navigation path.
-    @Binding private var navigationPath: [Video]
-    /// A path that represents the user's content navigation path.
-    @Binding private var isPresentingSpace: Bool
-    
-    /// Creates a `LibraryView` with a binding to a selection path.
-    ///
-    /// The default value is an empty binding.
-    init(path: Binding<[Video]>, isPresentingSpace: Binding<Bool> = .constant(false)) {
-        _navigationPath = path
-        _isPresentingSpace = isPresentingSpace
-    }
-    
+
     var body: some View {
-        NavigationStack(path: $navigationPath) {
+        @Bindable var immersion = immersion
+        NavigationStack(path: $immersion.navigationPath) {
             // Wrap the content in a vertically scrolling view.
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: verticalPadding) {
@@ -68,10 +57,6 @@ struct LibraryView: View {
             .ignoresSafeArea()
             #endif
         }
-        #if os(visionOS)
-        // A custom view modifier that presents an immersive space when you navigate to the detail view.
-        .updateImmersionOnChange(of: $navigationPath, isPresentingSpace: $isPresentingSpace)
-        #endif
     }
 
     // MARK: - Platform-specific metrics.
@@ -96,8 +81,9 @@ struct LibraryView: View {
 
 #Preview {
     NavigationStack {
-        LibraryView(path: .constant([]))
-            .environment(PlayerModel())
-            .environment(VideoLibrary())
+        LibraryView()
     }
+    .environment(PlayerModel())
+    .environment(VideoLibrary())
+    .environment(Immersion())
 }

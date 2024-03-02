@@ -6,6 +6,7 @@ Constants that define named destinations the app supports.
 */
 
 import Foundation
+import SwiftUI
 
 enum Destination: String, CaseIterable, Identifiable, Codable {
     
@@ -34,4 +35,18 @@ enum Destination: String, CaseIterable, Identifiable, Codable {
         case .park: 190
         }
     }
+    
+    #if os(visionOS)
+    var contentBrightness: ImmersiveContentBrightness {
+        switch self {
+        case .beach: .dim
+        case .camping: .bright
+        case .creek: .dim
+        case .hillside: .bright
+        case .lake: .dim
+        case .ocean: .bright
+        case .park: .dim
+        }
+    }
+    #endif
 }

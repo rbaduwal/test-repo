@@ -21,7 +21,7 @@ actor VideoWatchingCoordinator {
     // An object that determines video equality when sharing.
     private let coordinatorDelegate = CoordinatorDelegate()
     // A player object's playback coordinator.
-    private var playbackCoordinator: AVPlayerPlaybackCoordinator
+    private unowned var playbackCoordinator: AVPlayerPlaybackCoordinator
     
     init(playbackCoordinator: AVPlayerPlaybackCoordinator) {
         self.playbackCoordinator = playbackCoordinator
@@ -44,14 +44,17 @@ actor VideoWatchingCoordinator {
             
             // Create a new configuration that enables all participants to share the same immersive space.
             var configuration = SystemCoordinator.Configuration()
+            // Enable showing Spatial Personas inside an immersive space.
             configuration.supportsGroupImmersiveSpace = true
+            // Use the side-by-side template to arrange participants in a line with the content in front.
+            configuration.spatialTemplatePreference = .sideBySide
             // Update the coordinator's configuration.
             systemCoordinator.configuration = configuration
             #endif
             
             // Set the app's active group session before joining.
             groupSession = session
-            
+
             let stateListener = Task {
                 await self.handleStateChanges(groupSession: session)
             }

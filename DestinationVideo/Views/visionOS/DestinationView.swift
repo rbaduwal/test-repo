@@ -86,7 +86,7 @@ extension Entity {
                 guard let self = self else { return }
                 
                 guard var modelComponent = self.components[ModelComponent.self] else {
-                    fatalError("Should this be fatal? Probably.")
+                    fatalError("No model component found.")
                 }
                 
                 var material = UnlitMaterial()

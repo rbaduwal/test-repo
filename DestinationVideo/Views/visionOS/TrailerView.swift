@@ -26,6 +26,7 @@ struct TrailerView: View {
                 TrailerPosterView(video: video)
             }
             .buttonStyle(.plain)
+            .buttonBorderShape(.roundedRectangle)
         } else {
             PlayerView(controlsStyle: .custom)
                 .onAppear {

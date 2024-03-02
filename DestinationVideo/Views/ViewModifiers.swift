@@ -7,59 +7,80 @@ Custom view modifiers that the app defines.
 
 import SwiftUI
 
+#if os(visionOS)
 extension View {
-    #if os(visionOS)
-    func updateImmersionOnChange(of path: Binding<[Video]>, isPresentingSpace: Binding<Bool>) -> some View {
-        self.modifier(ImmersiveSpacePresentationModifier(navigationPath: path, isPresentingSpace: isPresentingSpace))
-    }
-    #endif
-    
-    // Only used in iOS and tvOS for full-screen modal presentation.
-    func fullScreenCoverPlayer(player: PlayerModel) -> some View {
-        self.modifier(FullScreenCoverModifier(player: player))
+    // A custom modifier in visionOS that manages the presentation and dismissal of the app's immersive space.
+    func immersionManager() -> some View {
+        self.modifier(ImmersiveSpacePresentationModifier())
     }
 }
+#else
+extension View {
+    // Only used in iOS and tvOS for full-screen modal presentation.
+    func fullScreenCoverPlayer() -> some View {
+        self.modifier(FullScreenCoverModifier())
+    }
+}
+#endif
 
 #if os(visionOS)
 private struct ImmersiveSpacePresentationModifier: ViewModifier {
+    
+    @Environment(Immersion.self) private var immersion
+    @Environment(PlayerModel.self) private var playerModel
     
     @Environment(\.openImmersiveSpace) private var openSpace
     @Environment(\.dismissImmersiveSpace) private var dismissSpace
     /// The current phase for the scene, which can be active, inactive, or background.
     @Environment(\.scenePhase) private var scenePhase
     
-    @Binding var navigationPath: [Video]
-    @Binding var isPresentingSpace: Bool
-    
     func body(content: Content) -> some View {
         content
-            .onChange(of: navigationPath) {
+            .onChange(of: immersion.navigationPath) {
                 Task {
                     // The selection path becomes empty when the user returns to the main library window.
-                    if navigationPath.isEmpty {
-                        if isPresentingSpace {
+                    if immersion.navigationPath.isEmpty {
+                        if immersion.isImmersive {
                             // Dismiss the space and return the user to their real-world space.
                             await dismissSpace()
-                            isPresentingSpace = false
+                            immersion.isImmersive = false
                         }
                     } else {
-                        guard !isPresentingSpace else { return }
+                        guard !immersion.isImmersive else { return }
                         // The navigationPath has one video, or is empty.
-                        guard let video = navigationPath.first else { fatalError() }
+                        guard let video = immersion.navigationPath.first else { fatalError() }
                         // Await the request to open the destination and set the state accordingly.
                         switch await openSpace(value: video.destination) {
-                        case .opened: isPresentingSpace = true
-                        default: isPresentingSpace = false
+                        case .opened: immersion.isImmersive = true
+                        default: immersion.isImmersive = false
                         }
                     }
                 }
             }
             // Close the space and unload media when the user backgrounds the app.
-            .onChange(of: scenePhase) { _, newPhase in
-                if isPresentingSpace, newPhase == .background {
-                    Task {
-                        await dismissSpace()
+            .onChange(of: playerModel.currentItem) { _, newVideo in
+                Task {
+                    if let newVideo {
+                        if !immersion.isImmersive {
+                            // Await the request to open the destination and set the state accordingly.
+                            switch await openSpace(value: newVideo.destination) {
+                            case .opened: immersion.isImmersive = true
+                            default: immersion.isImmersive = false
+                            }
+                        }
+                    } else {
+                        // If on the main screen while currently displaying an immersive space, dismiss it.
+                        if immersion.navigationPath.isEmpty, immersion.isImmersive {
+                            await dismissSpace()
+                            immersion.isImmersive = false
+                        }
                     }
+                }
+            }
+            // The system dismisses the immersive space when the app is backgrounded.
+            .onChange(of: scenePhase) { _, newPhase in
+                if newPhase == .background {
+                    immersion.isImmersive = false
                 }
             }
     }
@@ -68,7 +89,7 @@ private struct ImmersiveSpacePresentationModifier: ViewModifier {
 
 private struct FullScreenCoverModifier: ViewModifier {
     
-    let player: PlayerModel
+    @Environment(PlayerModel.self) private var player
     @State private var isPresentingPlayer = false
     
     func body(content: Content) -> some View {

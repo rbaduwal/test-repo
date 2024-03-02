@@ -14,6 +14,8 @@ struct Video: Identifiable, Hashable, Codable {
     let id: Int
     /// The URL of the video, which can be local or remote.
     let url: URL
+    /// A Boolean value that indicates whether the video contains 3D content.
+    let is3D: Bool
     /// The title of the video.
     let title: String
     /// The base image name.
@@ -43,6 +45,17 @@ struct Video: Identifiable, Hashable, Codable {
         url.scheme != nil
     }
     
+    /// A Boolean value that indicates whether the video is playable on the current platform.
+    var isPlayable: Bool {
+        // Only evaluate 3D content; 2D content is always playable.
+        guard is3D else { return true }
+        #if os(visionOS)
+            return true
+        #else
+            return false
+        #endif
+    }
+    
     /// A destination in which to watch the video.
     /// The app presents this destination in an immersive space.
     var destination: Destination
@@ -63,5 +76,18 @@ struct Video: Identifiable, Hashable, Codable {
             let calendar = Calendar(identifier: .gregorian)
             return calendar.date(from: components)!
         }
+    }
+}
+
+// MARK: - #Preview Extensions
+extension Video {
+    static var preview: Video {
+        VideoLibrary().videos[0]
+    }
+}
+
+extension Array {
+    static var all: [Video] {
+        VideoLibrary().videos
     }
 }

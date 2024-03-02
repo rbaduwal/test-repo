@@ -86,7 +86,10 @@ import Observation
         guard let url = Bundle.main.url(forResource: filename, withExtension: nil) else {
             fatalError("Couldn't find \(filename) in main bundle.")
         }
-        return load(url)
+        // Parse and load the Video data from the JSON file.
+        let videos: [Video] = load(url)
+        // Filter the results to only those playable on the current platform.
+        return videos.filter { $0.isPlayable }
     }
     
     /// Loads the user's list of videos in their Up Next list.
@@ -127,7 +130,6 @@ import Observation
         }
         do {
             let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
             return try decoder.decode(T.self, from: data)
         } catch {
             fatalError("Couldn't parse \(url.lastPathComponent) as \(T.self):\n\(error)")

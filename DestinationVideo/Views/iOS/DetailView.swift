@@ -86,5 +86,6 @@ struct DetailView: View {
         DetailView(video: .preview)
             .environment(PlayerModel())
             .environment(VideoLibrary())
+            .environment(Immersion())
     }
 }
