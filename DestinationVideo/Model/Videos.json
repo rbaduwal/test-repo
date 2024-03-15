@@ -19,24 +19,6 @@
     },
     {
         "id": 2,
-        "url": "https://devstreaming-cdn.apple.com/videos/streaming/examples/historic_planet_content_2023-10-26-3d-video/main.m3u8",
-        "is3D": true,
-        "title": "Prehistoric Planet Clip",
-        "imageName": "prehistoric",
-        "description": "Watch Prehistoric Planet in 2D on Apple TV+. Where available.",
-        "destination": "prehistoric",
-        "info": {
-            "releaseYear": "2023",
-            "contentRating": "TV-PG",
-            "duration": "1m",
-            "genres": ["Documentary","Animation","History"],
-            "directors": ["Andrew R. Jones","Adam Valdez"],
-            "writers": ["Paul Stewart","Dom Walter","Matthew Wright"],
-            "stars": ["David Attenborough"]
-        }
-    },
-    {
-        "id": 3,
         "url": "http://playgrounds-cdn.apple.com/assets/lake/index.m3u8",
         "is3D": false,
         "title": "By the Lake",
@@ -54,7 +36,7 @@
         }
     },
     {
-        "id": 4,
+        "id": 3,
         "url": "http://playgrounds-cdn.apple.com/assets/camping/index.m3u8",
         "is3D": false,
         "title": "Camping in the Woods",
@@ -72,7 +54,7 @@
         }
     },
     {
-        "id": 5,
+        "id": 4,
         "url": "http://playgrounds-cdn.apple.com/assets/park/index.m3u8",
         "is3D": false,
         "title": "Birds in the Park",
@@ -90,7 +72,7 @@
         }
     },
     {
-        "id": 6,
+        "id": 5,
         "url": "http://playgrounds-cdn.apple.com/assets/creek/index.m3u8",
         "is3D": false,
         "title": "Mystery Creek",
@@ -108,7 +90,7 @@
         }
     },
     {
-        "id": 7,
+        "id": 6,
         "url": "http://playgrounds-cdn.apple.com/assets/hillside/index.m3u8",
         "is3D": false,
         "title": "The Rolling Hills",
@@ -126,7 +108,7 @@
         }
     },
     {
-        "id": 8,
+        "id": 7,
         "url": "http://playgrounds-cdn.apple.com/assets/ocean/index.m3u8",
         "is3D": false,
         "title": "Ocean Breeze",

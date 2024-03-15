@@ -17,7 +17,6 @@ enum Destination: String, CaseIterable, Identifiable, Codable {
     case lake
     case ocean
     case park
-    case prehistoric
     
     var id: Self { self }
     
@@ -34,7 +33,6 @@ enum Destination: String, CaseIterable, Identifiable, Codable {
         case .lake: -55
         case .ocean: 0
         case .park: 190
-        case .prehistoric: 0
         }
     }
     
@@ -48,7 +46,6 @@ enum Destination: String, CaseIterable, Identifiable, Codable {
         case .lake: .dim
         case .ocean: .bright
         case .park: .dim
-        case .prehistoric:.dim
         }
     }
     #endif
