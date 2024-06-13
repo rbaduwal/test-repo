@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Sandbox</string>
+    <string name="register">Register</string>
+    <string name="syncing_data">Syncing Data ...</string>
+    <string name="orientationLandscapeChange">Please change the orientation to landscape</string>
+</resources>

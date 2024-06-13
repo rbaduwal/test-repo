@@ -1,0 +1,72 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+  desc "Submit NBA Android Build to Azure Storage"
+  lane :app do 
+    begin
+      #version_code = sh('gdate +%s') #_calculating epoch time
+      gradle(task: "app:assembleRelease")
+        #properties: { 'versionCode' => version_code }
+      #)
+      appVersion = sh("cd .. && tr -d '\n' < version | cat")
+      repo_name = sh("basename -s .git `git config --get remote.origin.url`")
+      container = "appbuilds"
+      account_key = "MkOn/a/zOR0gar5bwX5GA9eR07b7q7J53kDwIW8JJO2VBhgsdGYurtOaRqTJ04ogT1yTpvaH12i5oW42m0eSUw=="
+      account_name = "quintarpub"
+      #appVersion = "0.0"
+      bloburl = "https://#{account_name}.blob.core.windows.net/#{container}/Android/NBA/#{appVersion}/app-release.apk"
+      blob_url = "https://#{account_name}.blob.core.windows.net/#{container}/Android/NBA/#{appVersion}/NBA-index.html"
+      sh("cd .. && pwd > work")    
+      source = sh("cd .. && tr -d '\n' < work | cat")
+      sh("cd .. && ./html.sh #{appVersion} #{bloburl}")
+      sh("az storage blob upload --overwrite -c #{container}/Android/NBA/#{appVersion} -f #{source}/NBA-index.html --content-type text/html --account-name #{account_name} --account-key #{account_key}")
+      sh("az storage blob upload --overwrite -c #{container}/Android/NBA/#{appVersion} -f #{source}/app/build/outputs/apk/release/app-release.apk --account-name #{account_name} --account-key #{account_key}")
+      gitMsg    = sh("git log -1 --pretty=%B")
+      # Slack Notification
+      slack(
+        pretext: "Build Sucess",
+        message:"NBA Android build is successfully generated and uploaded to Azure Blob Storage  <#{blob_url}|Click Here to Download & Install>",
+        success: true,
+        payload: { 
+                 "Platform" => "Android", 
+                 "App Version" => "#{appVersion}",
+                 "Git Repo" => "#{repo_name}",
+              },
+      )
+      gitMsg    = sh("git log -1 --pretty=%B")
+      
+      
+    rescue => exception
+      on_error_app(gitMsg)
+    end
+  end
+end
+
+def on_error_app(gitMessage)
+    slack(
+        pretext: "Build Failed",
+        message:"NBA Android App build failed",
+        success: true,
+            payload: {
+                 "Platform" => "Android",
+                 "Git Repo" => "#{repo_name}",
+                 
+  },
+      )
+  exit(1)
+end

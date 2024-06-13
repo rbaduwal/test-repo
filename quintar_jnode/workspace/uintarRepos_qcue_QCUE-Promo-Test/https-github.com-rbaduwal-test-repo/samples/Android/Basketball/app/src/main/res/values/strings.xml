@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">BBDEMO</string>
+    <string name="register">Register</string>
+    <string name="syncing_data">Syncing Data ...</string>
+    <string name="orientationLandscapeChange">Rotate to begin</string>
+
+    <string name="round_one">1</string>
+    <string name="round_two">2</string>
+    <string name="round_three">3</string>
+    <string name="round_four">4</string>
+    <string name="three_points">3PT</string>
+    <string name="total">TOT</string>
+    <string name="two_points">2PT</string>
+    <string name="tap_to_begin">Tap to begin</string>
+    <string name="test_mode">Test Mode</string>
+    <string name="show_outline">Show Outline</string>
+    <string name="password_text">Enter the password</string>
+    <string name="alert_dialogue_button_text">OK</string>
+    <string name="alert_dialogue">Enter password to enable test mode</string>
+    <string name="alert_title">Password Required</string>
+    <string name="wrong_password">Wrong password</string>
+    <string name="ar_ui_config_url">https://quintardatalakedev.blob.core.windows.net/mba/sdk/phobos_slam/qrealityBasketball_test3.json</string>
+</resources>

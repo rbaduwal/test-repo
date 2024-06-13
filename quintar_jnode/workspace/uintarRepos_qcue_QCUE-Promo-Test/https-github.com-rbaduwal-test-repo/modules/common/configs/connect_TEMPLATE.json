@@ -1,0 +1,40 @@
+{
+   "lid": "pgatour",
+   "sid": "2022",
+   "gid": "R2022004",
+   "fops": [
+      {
+         "id": "course_0_hole_15",
+         "mfTrackerStatus": false,
+         "registrationDelay": 4,
+         "confidenceThreshold": 50,
+         "fourcc": "Y420",
+         "jpegCompression": 0.7,
+         "jpegScale": 0.75,
+         "longSecs": 4,
+         "mediumSecs":10,
+         "shortSecs": 4,
+         "confidenceHighThreshold":61,
+         "confidenceMediumThreshold":31,
+         "confidenceIndex":75,
+         "lightEstimationThreshold":100,
+         "registrationUrl": ""
+      }
+   ],
+   "test":{
+      "fops": [
+         {
+            "id": "course_0_hole_9",
+            "mfTrackerStatus": true,
+            "registrationDelay": 4,
+            "confidenceThreshold": 50,
+            "fourcc": "Y420",
+            "jpegCompression": 0.7,
+            "jpegScale": 0.75,
+            "longSecs": 4,
+            "registrationUrl": "",
+            "shortSecs": 4
+         }
+      ]
+   }
+}

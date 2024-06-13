@@ -1,0 +1,17 @@
+{
+    "eventId":"",
+    "fops":[
+        {
+            "id":"court0",
+            "mfTrackerStatus":false,
+            "registrationDelay":4,
+            "confidenceThreshold":50,
+            "fourcc":"Y420",
+            "jpegCompression":0.7,
+            "jpegScale":0.75,
+            "longSecs":4,
+            "registrationUrl":"http://40.121.107.34:12345/registration",
+            "shortSecs":4
+        }
+    ]
+}

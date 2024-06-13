@@ -1,0 +1,44 @@
+{
+  "fileVersion": "0.1.1",
+  "minSoftwareVersion": "0.2.0",
+  "seasonId": "",
+  "eventId": "",
+  "arUiView": {
+    "sport": "basketball",
+    "experiences": [
+      {
+        "type": "VENUE"
+        
+      }
+    ],
+    "assetsBaseUrl": ""
+  },
+  "connect": {
+    "configUrl": "connect.json"
+  },
+  "stream": {
+    "configUrl": "stream_TEMPLATE.json"
+  },
+  "sportData": {
+    "configUrl": "sportData_TEMPLATE.json"
+  },
+  "gamification": {
+    "configUrl": "gamification_TEMPLATE.json"
+  },
+  "analytics": {
+    "configUrl": "analytics_TEMPLATE.json"
+  },
+  "debug": {
+    "autoBallTraceAnimationDelay": 5,
+    "ballTrace": {
+       "fadeinEndIndex": 10,
+       "fadeinStartIndex": 0,
+       "flightAnimationSpeed": 0.05,
+       "flightThickness": 0.5,
+       "intermediatePointCount": 10,
+       "opacity": 0.8,
+       "puttThickness": 1.35,
+       "puttTraceAnimationSpeed": 0.05
+    }
+  }
+}

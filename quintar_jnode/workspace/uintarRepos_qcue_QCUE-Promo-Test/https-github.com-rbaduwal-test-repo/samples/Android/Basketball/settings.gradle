@@ -1,0 +1,13 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Basketball"
+include ':app',':Q',':Q.ui'
+project(':Q').projectDir = new File('../../../modules/Android/Q')
+project(':Q.ui').projectDir = new File('../../../modules/Android/Q_ui')
+
+

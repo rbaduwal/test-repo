@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="replayTableViewHeader" customModule="sdkgolfsample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="275" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WtG-hW-TEE">
+                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                    <color key="backgroundColor" red="0.8980392157" green="0.92156862750000001" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="i0Z-xN-xdK"/>
+                        <constraint firstAttribute="height" constant="44" id="yRD-Qc-Vxm"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="starUnselected"/>
+                    <connections>
+                        <action selector="favoriteButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="agt-yZ-Gno"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUR-1V-R9G">
+                    <rect key="frame" x="88" y="0.0" width="143" height="44"/>
+                    <color key="backgroundColor" red="0.8980392157" green="0.92156862750000001" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Efc-ZE-1W8"/>
+                        <constraint firstAttribute="width" constant="143" id="Idc-2l-lLu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="18"/>
+                    <inset key="titleEdgeInsets" minX="-74" minY="-1" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="PLAYER">
+                        <color key="titleColor" red="0.086274509799999996" green="0.2470588235" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="playerButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Oaf-of-MZh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="246" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xn4-46-eDz">
+                    <rect key="frame" x="44" y="0.0" width="44" height="44"/>
+                    <color key="backgroundColor" red="0.8980392157" green="0.92156862750000001" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="AAp-Sd-4UK"/>
+                        <constraint firstAttribute="height" constant="44" id="xWU-aB-KFt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="POS">
+                        <color key="titleColor" red="0.086274509799999996" green="0.2470588235" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="positionButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="7bb-Qp-6Eg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ig2-iE-Ml7">
+                    <rect key="frame" x="231" y="0.0" width="44" height="44"/>
+                    <color key="backgroundColor" red="0.8980392157" green="0.92156862750000001" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="4BZ-eh-Tcd"/>
+                        <constraint firstAttribute="width" constant="44" id="UWG-J9-GC7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="TOT">
+                        <color key="titleColor" red="0.086274509799999996" green="0.2470588235" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="totButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="LRg-4c-HEX"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oL0-wW-I7C">
+                    <rect key="frame" x="0.0" y="0.0" width="1" height="44"/>
+                    <viewLayoutGuide key="safeArea" id="FXD-CB-NCy"/>
+                    <color key="backgroundColor" red="0.59999999999999998" green="0.69019607839999997" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="oGu-Pf-f8o"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="KUR-1V-R9G" secondAttribute="bottom" id="9bQ-fD-z85"/>
+                <constraint firstItem="Xn4-46-eDz" firstAttribute="leading" secondItem="WtG-hW-TEE" secondAttribute="trailing" id="BDO-Ik-ljn"/>
+                <constraint firstAttribute="bottom" secondItem="WtG-hW-TEE" secondAttribute="bottom" id="PyW-g3-hhq"/>
+                <constraint firstItem="oL0-wW-I7C" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RKa-yl-EbM"/>
+                <constraint firstItem="KUR-1V-R9G" firstAttribute="leading" secondItem="Xn4-46-eDz" secondAttribute="trailing" id="SOJ-QP-PfO"/>
+                <constraint firstItem="Xn4-46-eDz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ViW-Y4-TqX"/>
+                <constraint firstItem="WtG-hW-TEE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aJY-Y1-KpM"/>
+                <constraint firstItem="ig2-iE-Ml7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ceJ-YY-u0n"/>
+                <constraint firstItem="WtG-hW-TEE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dKt-wk-aN3"/>
+                <constraint firstAttribute="bottom" secondItem="oL0-wW-I7C" secondAttribute="bottom" id="eNW-NA-M8o"/>
+                <constraint firstItem="KUR-1V-R9G" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kLr-Ug-rsO"/>
+                <constraint firstAttribute="bottom" secondItem="ig2-iE-Ml7" secondAttribute="bottom" id="khU-Qz-MhZ"/>
+                <constraint firstAttribute="trailing" secondItem="ig2-iE-Ml7" secondAttribute="trailing" id="ltV-7K-Ggf"/>
+                <constraint firstItem="oL0-wW-I7C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="o5r-W5-8a5"/>
+                <constraint firstAttribute="bottom" secondItem="Xn4-46-eDz" secondAttribute="bottom" id="v0c-PJ-oR8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="favoriteButton" destination="WtG-hW-TEE" id="6Ok-tj-lS5"/>
+                <outlet property="playerButton" destination="KUR-1V-R9G" id="jM2-Vq-Po9"/>
+                <outlet property="postionButton" destination="Xn4-46-eDz" id="ttz-Kq-b7z"/>
+                <outlet property="totButton" destination="ig2-iE-Ml7" id="mr1-js-iKz"/>
+            </connections>
+            <point key="canvasLocation" x="131.15942028985509" y="72.991071428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="starUnselected" width="24" height="22.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

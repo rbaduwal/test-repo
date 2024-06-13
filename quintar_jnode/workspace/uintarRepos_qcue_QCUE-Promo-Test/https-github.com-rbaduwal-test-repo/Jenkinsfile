@@ -1,0 +1,76 @@
+pipeline {
+  agent{
+        label "macos_12.0.1"
+    }
+
+  options {
+      timeout(time: 4, unit: 'HOURS') 
+  }
+
+  parameters {
+      choice(choices: ['IOS', 'Android'], name: 'Sandbox_App_Platform', description: 'Please select the Platform of the app to Build')
+
+  }
+
+  stages {
+        stage('Build the Golf Sandbox IOS APP'){
+            steps {
+                script {
+                    if ((params.Sandbox_App_Platform == "IOS")){
+                     withCredentials([string(credentialsId: '1007eb3d-4346-4876-b20a-ecccd1a9a19e', variable: 'password')]) {
+                     sh 'chmod +x branch.sh'
+                     sh './branch.sh'   
+                     liste = readFile 'branches'
+                     echo "please click on the link here to chose the branch to build"
+                     env.BRANCH_SCOPE = input message: 'Please choose the SDK branch to build ', ok: 'Build!',
+                     parameters: [choice(name: 'BRANCH_NAME', choices: "${liste}", description: 'Branch to build?')]
+
+                     sh """
+                     #!/bin/zsh -l
+                     export LANG=en_US.UTF-8
+                     export PATH=$PATH:/usr/local/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims
+                     security unlock-keychain -p '$password' /Users/ec2-user/Library/Keychains/login.keychain-db
+                     rm -rf Q.reality_SDK/
+                     git clone -b ${env.BRANCH_SCOPE} git@github.com:quintar-dev/Q.reality_SDK.git
+                     cd Q.reality_SDK/modules/iOS
+                     fastlane framework
+                     cp -rvf ./*.framework ../../samples/iOS/golf
+
+                     cd ../../samples/iOS/golf
+                     chmod +x html.sh
+                     fastlane golf_sandbox_azure
+                     """
+                     }
+                    }
+                }
+            }
+    }
+        stage('Build the Basketball Sandbox Android App'){
+            steps {
+                script {
+                    if ((params.Sandbox_App_Platform == "Android")){
+                     withCredentials([gitUsernamePassword(credentialsId: 'e57b9076-77c3-417f-b36b-50e413520223', gitToolName: 'Default')]) {                    script{
+                     //git credentialsId: 'e57b9076-77c3-417f-b36b-50e413520223', url: 'https://github.com/quintar-dev/Q.reality_SDK.git'
+                    
+                        sh """
+                            #!/bin/zsh -l
+                            export LANG=en_US.UTF-8
+                            export PATH=$PATH:/usr/local/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims
+                            cd samples/Android/Sandbox/
+                            chmod +x html.sh
+                            cat app/build.gradle | grep versionName > out
+                            grep -o '".*"' out | sed 's/"//g' > version
+                            chmod +x gradlew
+                            fastlane android_sandbox
+                        """   
+                    
+                    }
+                } 
+            }
+        }//end of stage
+
+        }
+    }
+}
+}
+        

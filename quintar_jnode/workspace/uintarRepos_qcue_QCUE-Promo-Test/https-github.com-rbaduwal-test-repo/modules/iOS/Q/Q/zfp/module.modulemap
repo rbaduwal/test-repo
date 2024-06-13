@@ -1,0 +1,9 @@
+module zfp {
+   header "zfp.h"
+   header "bitstream.h"
+   header "zfp/types.h"
+   header "zfp/system.h"
+   header "zfp/version.h"
+   header "zfp/macros.h"
+   export *
+}

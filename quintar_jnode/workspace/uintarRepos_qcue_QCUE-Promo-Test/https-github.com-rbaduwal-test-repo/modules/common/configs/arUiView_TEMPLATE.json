@@ -1,0 +1,53 @@
+{
+  "lid": "pgatour",
+  "sid": "2022",
+  "gid": "R2022004",
+  "fileVersion": "0.1.1",
+  "minSoftwareVersion": "0.2.0",
+  "arUiView": {
+    "sport": "golf",
+    "experiences": [
+      {
+        "type": "VENUE",
+        "autoBallTraceAnimationDelay": 5,
+        "ballTrace": {
+          "fadeinEndIndex": 10,
+          "fadeinStartIndex": 0,
+          "flightAnimationSpeed": 0.05,
+          "flightThickness": 0.5,
+          "intermediatePointCount": 10,
+          "opacity": 0.8,
+          "puttThickness": 1.35,
+          "puttTraceAnimationSpeed": 0.05
+        }
+      }
+    ],
+    "assetsBaseUrl": ""
+  },
+  "connect": {
+    "configUrl": "connect_TEMPLATE.json"
+  },
+  "stream": {
+    "configUrl": "stream_TEMPLATE.json"
+  },
+  "sportData": {
+    "configUrl": "sportData_TEMPLATE.json"
+  },
+  "gamification": {
+    "configUrl": "gamification_TEMPLATE.json"
+  },
+  "analytics": {
+    "configUrl": "analytics_TEMPLATE.json"
+  },
+  "test": {
+    "fops": [
+      {
+         "id": "course_0_hole_15",
+          "outlineUrls": [
+          ],
+          "testImageUrl": "",
+          "testJsonUrl": ""
+         }
+      ]
+  }
+}

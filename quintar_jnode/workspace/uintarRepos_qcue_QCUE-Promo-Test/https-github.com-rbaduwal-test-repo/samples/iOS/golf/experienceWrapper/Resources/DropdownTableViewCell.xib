@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DropdownTableViewCell" id="KGk-i7-Jjw" customClass="dropdownTableViewCell" customModule="PGATOURAR" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="275" height="46"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="275" height="46"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPg-IQ-mp8">
+                        <rect key="frame" x="15" y="15" width="49" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="uK1-oq-qsi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="16"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRg-xM-gGv">
+                        <rect key="frame" x="241" y="12" width="17" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="Fbs-dt-E3B"/>
+                            <constraint firstAttribute="width" constant="17" id="nUg-c8-Ce2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.12156862745098039" green="0.28627450980392155" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="DPg-IQ-mp8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="OeW-MH-2bI"/>
+                    <constraint firstItem="DPg-IQ-mp8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="YLk-JO-o60"/>
+                    <constraint firstAttribute="bottom" secondItem="DPg-IQ-mp8" secondAttribute="bottom" constant="10" id="ePl-p7-pIN"/>
+                    <constraint firstAttribute="trailing" secondItem="BRg-xM-gGv" secondAttribute="trailing" constant="17" id="guA-F9-Rf2"/>
+                    <constraint firstItem="BRg-xM-gGv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="zsi-QB-WnA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="checkLabel" destination="BRg-xM-gGv" id="8pH-WU-xLo"/>
+                <outlet property="roundOrHoleLabel" destination="DPg-IQ-mp8" id="93d-F9-S9x"/>
+            </connections>
+            <point key="canvasLocation" x="131.15942028985509" y="99.776785714285708"/>
+        </tableViewCell>
+    </objects>
+</document>

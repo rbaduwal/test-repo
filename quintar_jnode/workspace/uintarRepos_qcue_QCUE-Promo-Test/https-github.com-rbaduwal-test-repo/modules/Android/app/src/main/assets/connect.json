@@ -1,0 +1,27 @@
+{
+    "eventId":"",
+    "locations":[
+        {
+            "id":"course_0_hole_15",
+            "mfTrackerStatus":false,
+            "registrationDelay":4,
+            "confidenceThreshold":50,
+            "fourcc":"Y420",
+            "jpegCompression":0.7,
+            "jpegScale":0.75,
+            "longSecs":4,
+            "registrationUrl":"http://40.121.107.34:12345/registration",
+            "shortSecs":4
+        }
+    ],
+    "test": {
+        "locations": [
+            {
+                "num": 0,
+                "outlineUrls": ["NBA_court.json"],
+                "testImageUrl": "NBA_TestImage.jpeg",
+                "testJsonUrl": "NBA_TestJson.json"
+            }
+        ]
+    }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ai.quintar.basketball">
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.Basketball"
+        android:usesCleartextTraffic="true">
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="required" />
+        <activity
+            android:name="ai.quintar.basketball.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

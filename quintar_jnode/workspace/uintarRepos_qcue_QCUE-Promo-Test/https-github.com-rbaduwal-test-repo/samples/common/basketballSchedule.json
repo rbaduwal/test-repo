@@ -1,0 +1,25 @@
+{
+   "tournaments": [
+      {
+         "st": "2022-02-03T04:00:00",
+         "et": "2022-02-09T17:00:00",
+         "gna": "phobos_slam",
+         "desc": "Raise the hoops! Phobos takes on Mars at the iconic Observatory Arena",
+         "vna": "Observatory Arena",
+         "ci": "Phobos",
+         "stt": "Mars",
+         "dc": "Dunkin D",
+         "lurl": "phobos",
+         "zn": "UTC",
+         "tz": "0",
+         "qrealityUrl": "https://quintardatalakedev.blob.core.windows.net/mba/sdk/phobos_slam/qrealityBasketball_newApi.json",
+         "fops": [
+            {
+               "fid": "observatory_arena_court0",
+               "fna": "Observatory Arena",
+               "fdesc": "We padded the top of the dome, jump as high as you can!"
+            }
+         ]
+      }
+   ]
+}

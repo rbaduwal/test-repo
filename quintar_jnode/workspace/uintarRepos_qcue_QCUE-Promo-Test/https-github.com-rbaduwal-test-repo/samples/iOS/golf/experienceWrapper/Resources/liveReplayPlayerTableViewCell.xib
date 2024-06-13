@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="liveReplayPlayerTableViewCell" rowHeight="600" id="KGk-i7-Jjw" customClass="liveReplayPlayerTableViewCell" customModule="sdkgolfsample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="245" height="172"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="245" height="172"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zky-nk-XJc">
+                        <rect key="frame" x="10" y="19.5" width="225" height="64"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXU-za-XuQ">
+                                <rect key="frame" x="0.0" y="0.0" width="225" height="16"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="GDH-Ke-9xy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rho-pN-PeW">
+                                <rect key="frame" x="0.0" y="16" width="225" height="16"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="0NA-Mk-adc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pa5-3Z-Rec">
+                                <rect key="frame" x="0.0" y="32" width="225" height="16"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="rrL-dn-sv1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7z-ee-7z8">
+                                <rect key="frame" x="0.0" y="48" width="225" height="16"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="gfX-fy-GHh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lz-Ri-smp">
+                        <rect key="frame" x="94" y="94.5" width="57" height="57"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="57" id="ecS-Pm-ics"/>
+                            <constraint firstAttribute="width" constant="57" id="y2z-J8-jgu"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain">
+                            <backgroundConfiguration key="background"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="livePlayButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="re4-Cy-BTD"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.1450980392" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="8lz-Ri-smp" firstAttribute="top" secondItem="zky-nk-XJc" secondAttribute="bottom" constant="11" id="4JY-55-ehT"/>
+                    <constraint firstAttribute="bottom" secondItem="8lz-Ri-smp" secondAttribute="bottom" constant="20.5" id="Bci-O9-XPi"/>
+                    <constraint firstItem="zky-nk-XJc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19.5" id="KDP-GA-kWq"/>
+                    <constraint firstItem="zky-nk-XJc" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="mKT-Qn-QLq"/>
+                    <constraint firstItem="8lz-Ri-smp" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="zwK-yU-1MH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="groupPlayButton" destination="8lz-Ri-smp" id="Uth-lt-KV4"/>
+                <outlet property="livePlayer1Label" destination="QXU-za-XuQ" id="SEx-q7-VPe"/>
+                <outlet property="livePlayer2Label" destination="rho-pN-PeW" id="a5w-Lf-Q4d"/>
+                <outlet property="livePlayer3Label" destination="pa5-3Z-Rec" id="UU9-11-LGN"/>
+                <outlet property="livePlayer4Label" destination="n7z-ee-7z8" id="8si-35-8H1"/>
+            </connections>
+            <point key="canvasLocation" x="103.62318840579711" y="149.33035714285714"/>
+        </tableViewCell>
+    </objects>
+</document>

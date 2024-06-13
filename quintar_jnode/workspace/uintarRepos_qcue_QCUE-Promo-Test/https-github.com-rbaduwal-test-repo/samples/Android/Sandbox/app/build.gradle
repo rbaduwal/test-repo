@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "ai.quintar.sandbox"
+        minSdk 24
+        targetSdk 31
+        versionCode 1
+        versionName "0.1"
+    }
+
+    signingConfigs {
+        release {
+            if (project.hasProperty('BB_DEMO_STORE_FILE')) {
+                storeFile file(BB_DEMO_STORE_FILE)
+                storePassword BB_DEMO_STORE_PASSWORD
+                keyAlias BB_DEMO_KEY_ALIAS
+                keyPassword BB_DEMO_KEY_PASSWORD
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+
+    packagingOptions {
+        pickFirst 'lib/arm64-v8a/libarcore_sdk_c.so'
+        pickFirst 'lib/arm64-v8a/libviro_arcore.so'
+        pickFirst 'lib/armeabi-v7a/libarcore_sdk_c.so'
+        pickFirst 'lib/armeabi-v7a/libviro_arcore.so'
+        pickFirst 'lib/x86_64/libarcore_sdk_c.so'
+        pickFirst 'lib/x86_64/libviro_arcore.so'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation project(path: ':Q')
+    implementation project(path: ':Q.ui')
+}

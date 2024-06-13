@@ -1,0 +1,30 @@
+{
+   "tournaments": [
+      {
+         "st": "2022-02-03T04:00:00",
+         "et": "2022-02-09T17:00:00",
+         "gna": "R2022060",
+         "desc": "TOUR Championship replay",
+         "vna": "East Lake",
+         "ci": "Buddyland",
+         "stt": "Tomland",
+         "dc": "Sammy M",
+         "lurl": "phobos",
+         "zn": "UTC",
+         "tz": "0",
+         "qrealityUrl": "https://quintardatalakedev.blob.core.windows.net/mgl/sdk/phobos_open/qrealityGolf.json",
+         "fops": [
+            {
+               "fid": "hole9",
+               "fna": "Hole No.9",
+               "fdesc": "There's a hole",
+            },
+            {
+               "fid": "hole15",
+               "fna": "Hole No.15",
+               "fdesc": "There's a hole",
+            }
+         ]
+      }
+   ]
+}

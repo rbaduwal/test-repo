@@ -1,0 +1,122 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out  
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Upload build to App Pool"
+  lane :golf_sandbox_azure do
+    begin
+      xcode_select("/Applications/Xcode_13.2.app")
+      build_number = Time.new.strftime("%Y%m%d%H%M%S")
+      increment_build_number(build_number: build_number,xcodeproj: "sdkgolfsample.xcodeproj")    
+
+      #update_code_signing_settings(
+      #	  use_automatic_signing: false,
+       #   path: "Basketball.xcodeproj"
+      #)
+
+      #update_project_provisioning(
+       # xcodeproj: "Basketball.xcodeproj",
+        #profile: "./profile/com_quintar_basketball_aws_Ad_Hoc.mobileprovision",
+        #code_signing_identity: "Apple Distribution"
+      #)
+
+      update_project_team(
+          path: "sdkgolfsample.xcodeproj",
+          teamid: "8378HTK873"
+      )
+      # Get app Version number using Fastlane
+       sh("cd .. && fastlane run get_version_number | sed -n 's/.*Result://p' > output")
+      version = sh("cd .. && strings output | tee stroutput")
+      sh("cd .. && tr -d ' ' < stroutput | cat > veroutput")
+      appVersion = sh("cd .. && tr -d '\n' < veroutput | cat")
+      repo_name = sh("basename -s .git `git config --get remote.origin.url`")	    
+      # Build App
+      build_app(
+	      
+        output_name: "golf_sandboxapp.ipa",
+        export_options: {
+            method: "ad-hoc",
+	    manifest: {
+             appURL: "https://quintarpub.blob.core.windows.net/appbuilds/IOS/Sandbox/golf/#{appVersion}/#{build_number}/golf_sandboxapp.ipa",
+             displayImageURL: "https://quintarpub.blob.core.windows.net/appbuilds/IOS/Images/NBA-small.png",
+             fullSizeImageURL: "https://quintarpub.blob.core.windows.net/appbuilds/IOS/Images/NBA.png"
+          }
+        },
+	 include_bitcode: true
+      )
+      fastlane_require "gym"
+      dist_plist_path = File.join(Gym.cache[:temporary_output_path], "DistributionSummary.plist")
+      FileUtils.cp(dist_plist_path, "./")
+      dist_plist_path = File.join(Gym.cache[:temporary_output_path], "ExportOptions.plist")
+      FileUtils.cp(dist_plist_path, "./")
+      dist_plist_path = File.join(Gym.cache[:temporary_output_path], "Packaging.log")
+      FileUtils.cp(dist_plist_path, "./")
+      sh("mkdir -p build && mv *list Pack* build/") 
+     
+
+      sh("cd .. && fastlane run get_version_number | sed -n 's/.*Result://p' > output")
+      version = sh("cd .. && strings output | tee stroutput")
+      sh("cd .. && tr -d ' ' < stroutput | cat > veroutput")
+      appVersion = sh("cd .. && tr -d '\n' < veroutput | cat")
+      repo_name = sh("basename -s .git `git config --get remote.origin.url`")
+      container = "appbuilds"
+      key = ENV["account_key"]
+      name = ENV["account_name"]
+      bloburl = "https://#{name}.blob.core.windows.net/#{container}/IOS/Sandbox/golf/#{appVersion}/#{build_number}/manifest.plist"
+      blob_url = "https://#{name}.blob.core.windows.net/#{container}/IOS/Sandbox/golf/#{appVersion}/#{build_number}/pga-sandbox-index.html"
+      sh("cd .. && pwd > work")    
+      source = sh("cd .. && tr -d '\n' < work | cat")  
+      sh("cd .. && ./html.sh #{appVersion} #{bloburl}")
+      sh("az storage blob upload --overwrite -c #{container}/IOS/Sandbox/golf/#{appVersion}/#{build_number} -f #{source}/pga-sandbox-index.html --account-name #{name} --content-type text/html --account-key #{key}")
+      sh("az storage blob upload --overwrite -c #{container}/IOS/Sandbox/golf/#{appVersion}/#{build_number} -f #{source}/manifest.plist --account-name #{name} --account-key #{key}")
+      sh("az storage blob upload --overwrite -c #{container}/IOS/Sandbox/golf/#{appVersion}/#{build_number} -f #{source}/golf_sandboxapp.ipa --account-name #{name} --account-key #{key}")
+      sh("az storage blob upload-batch --overwrite -d #{container}/IOS/Sandbox/golf/#{appVersion}/#{build_number} -s #{source}/fastlane/build/ --account-name #{name} --account-key #{key}")
+      gitMsg    = sh("git log -1 --pretty=%B")
+      slack(
+        pretext: "Build Sucess",
+        message:"Golf Sandbox iOS App autobuild is successfully generated and uploaded to Azure Blob Storage <#{blob_url}|Click Here to Download & Install>",
+        success: true,
+        payload: { 
+                 "Platform" => "iOS",
+		         "App Version" => "#{appVersion}",
+		         "Git Repo" => "#{repo_name}",
+		         "Build Number" => "#{build_number}",
+		         "SDK Branch" => "#{ENV["BRANCH_SCOPE"]}",
+                 
+  },
+      )
+    rescue => exception
+      on_error(gitMsg)
+    end
+  end
+end
+
+def on_error(gitMsg)
+  repo_name = sh("basename -s .git `git config --get remote.origin.url`")
+  slack(
+        pretext: "Build Failed",
+        message:"Golf Sandbox iOS App autobuild is failed : <#{ENV['BUILD_URL']}console | View Logs>",
+        success: false,
+            payload: {  
+                          "Platform" => "iOS",
+		         "Git Repo" => "#{repo_name}",
+                 
+  },
+      )
+  exit(1)
+end
+ 

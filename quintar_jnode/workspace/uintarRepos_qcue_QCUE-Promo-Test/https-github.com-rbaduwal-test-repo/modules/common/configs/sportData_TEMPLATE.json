@@ -1,0 +1,9 @@
+{
+   "lid": "pgatour",
+   "sid": "2022",
+   "gid": "R2022004",
+   "liveDataUrl": "backup_R2022004.json",
+   "apiEntrypointUrl": "http://20.119.34.39/api/platform/",
+   "retryConnectionInterval" : 3.0
+   "test": null
+}

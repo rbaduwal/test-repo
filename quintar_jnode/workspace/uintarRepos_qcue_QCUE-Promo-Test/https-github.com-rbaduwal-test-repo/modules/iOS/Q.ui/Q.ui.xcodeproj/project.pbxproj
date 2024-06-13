@@ -1,0 +1,978 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0252E22D27B64134001F4384 /* UIColor+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0252E22C27B64134001F4384 /* UIColor+Extention.swift */; };
+		02E717FF27B10C7100DE23FB /* golfFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E717FE27B10C7100DE23FB /* golfFlag.swift */; };
+		02E7180327B122EB00DE23FB /* Flag.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 02E7180227B122EB00DE23FB /* Flag.usdz */; };
+		02F134F627B25D23000F8F46 /* golfGreenModelPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F134F527B25D23000F8F46 /* golfGreenModelPlayerCard.swift */; };
+		15102F8D279C0FFA0056D61D /* sceneGraphNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15102F8C279C0FFA0056D61D /* sceneGraphNode.swift */; };
+		15102F92279C103C0056D61D /* golfBigTeeBoxPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15102F91279C103C0056D61D /* golfBigTeeBoxPlayerCard.swift */; };
+		15102FA0279C11B30056D61D /* golfBigGreenPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15102F9F279C11B30056D61D /* golfBigGreenPlayerCard.swift */; };
+		15102FA3279C12830056D61D /* golfPlayerTeeboxAssociatedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15102FA1279C12830056D61D /* golfPlayerTeeboxAssociatedData.swift */; };
+		15102FA4279C12830056D61D /* golfPlayerGreenAssociatedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15102FA2279C12830056D61D /* golfPlayerGreenAssociatedData.swift */; };
+		15102FA6279C13670056D61D /* ballPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15102FA5279C13670056D61D /* ballPath.swift */; };
+		15102FAA279C14090056D61D /* ObjectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15102FA9279C14090056D61D /* ObjectFactory.swift */; };
+		1540D2FE27B088E3007A8911 /* golfGreenModelPlayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1540D2FD27B088E3007A8911 /* golfGreenModelPlayerData.swift */; };
+		15AE7814279C2A0D00B136D7 /* SCN+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AE7812279C2A0D00B136D7 /* SCN+Extensions.swift */; };
+		15AE7815279C2A0D00B136D7 /* simd+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AE7813279C2A0D00B136D7 /* simd+Extensions.swift */; };
+		253412A927B065A2002F6910 /* golfGreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253412A827B065A2002F6910 /* golfGreenContainer.swift */; };
+		254370C727A5451000D6CCDD /* golfSmallGreenPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254370C627A5451000D6CCDD /* golfSmallGreenPlayerCard.swift */; };
+		254370CB27A5527800D6CCDD /* golfSmallTeeBoxPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254370CA27A5527800D6CCDD /* golfSmallTeeBoxPlayerCard.swift */; };
+		254370CF27A5569C00D6CCDD /* golfTeeBoxPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254370CE27A5569C00D6CCDD /* golfTeeBoxPlayerCard.swift */; };
+		254370D127A58B6500D6CCDD /* golfGreenPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254370D027A58B6500D6CCDD /* golfGreenPlayerCard.swift */; };
+		25564677279DB11F0043C427 /* playerImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25564675279DB11F0043C427 /* playerImage.xib */; };
+		25564678279DB11F0043C427 /* playerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25564676279DB11F0043C427 /* playerImage.swift */; };
+		2556467A279DB1E30043C427 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25564679279DB1E30043C427 /* UIView+Extensions.swift */; };
+		2556467C279DB4B20043C427 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2556467B279DB4B10043C427 /* Assets.xcassets */; };
+		255E5FA2277D9438009AFA00 /* venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255E5FA1277D9438009AFA00 /* venue.swift */; };
+		3060A2A027A3B5A600E15291 /* path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060A29F27A3B5A600E15291 /* path.swift */; };
+		308E400F279686C20002D6D3 /* basketballLegendBoardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E400E279686C20002D6D3 /* basketballLegendBoardNode.swift */; };
+		4D51143527B3FA8C00A6F7DA /* basketballHeatMapSceneGraphNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D51143427B3FA8C00A6F7DA /* basketballHeatMapSceneGraphNode.swift */; };
+		4D6C3DF9279EBEF00095A6C4 /* golfExperienceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C3DF8279EBEF00095A6C4 /* golfExperienceConfig.swift */; };
+		4D84FF69277CCC68004530E0 /* basketballVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D84FF68277CCC68004530E0 /* basketballVenue.swift */; };
+		4D92BF0A27EF47F2003746D5 /* basketballPlayerCardBoardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92BF0927EF47F2003746D5 /* basketballPlayerCardBoardNode.swift */; };
+		4E0FA60C28E2D4EA0011A223 /* golfGreenPlayerCardBaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0FA60B28E2D4EA0011A223 /* golfGreenPlayerCardBaseEntity.swift */; };
+		52148C69282A1F1F0049B6B1 /* basketballCourtsideBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52148C68282A1F1F0049B6B1 /* basketballCourtsideBoard.swift */; };
+		52148C83282C12750049B6B1 /* Q_ui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA56C3582747856A00857309 /* Q_ui.framework */; platformFilter = ios; };
+		52148C89282C127A0049B6B1 /* basketballTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52148C6B282C0FBA0049B6B1 /* basketballTests.swift */; };
+		52148C8A282C13AD0049B6B1 /* basketballVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D84FF68277CCC68004530E0 /* basketballVenue.swift */; };
+		5220052C2836919200B1D029 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B891C528330F720056F759 /* libc++.tbd */; };
+		5220052F2836991300B1D029 /* Q.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52ED20132832E7FF00AC3B6B /* Q.framework */; };
+		5221826227D920D00071C856 /* basketballViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221826127D920D00071C856 /* basketballViewModels.swift */; };
+		5222BA3A283323FE00CF83EE /* sportExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272243127DBBE4000B3A5A0 /* sportExperience.swift */; };
+		5222BA3B2833240300CF83EE /* Notification.Name+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA101FA42771BFD400E20F5F /* Notification.Name+Extensions.swift */; };
+		5222BA3C2833240300CF83EE /* UIColor+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0252E22C27B64134001F4384 /* UIColor+Extention.swift */; };
+		5222BA3D2833240300CF83EE /* arUiViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB82652750B7A700A487C9 /* arUiViewConfig.swift */; };
+		5222BA3E2833240300CF83EE /* arUiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA56C3752747ABEE00857309 /* arUiViewController.swift */; };
+		5222BA3F2833240300CF83EE /* teamPlayerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38187F727E334C200EB86FA /* teamPlayerImage.swift */; };
+		5222BA402833240300CF83EE /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C07E1A27C98E4300FE1E58 /* constants.swift */; };
+		5222BA412833240300CF83EE /* path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060A29F27A3B5A600E15291 /* path.swift */; };
+		5222BA422833240300CF83EE /* ballPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15102FA5279C13670056D61D /* ballPath.swift */; };
+		5222BA432833240300CF83EE /* venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255E5FA1277D9438009AFA00 /* venue.swift */; };
+		5222BA442833240300CF83EE /* sceneGraphNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15102F8C279C0FFA0056D61D /* sceneGraphNode.swift */; };
+		5222BA452833240300CF83EE /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52564A1F27DD2CEA00C12CA2 /* UIImage+Extension.swift */; };
+		5222BA462833240300CF83EE /* arUiViewUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA39B165274CC965001F8DC7 /* arUiViewUpdate.swift */; };
+		5222BA472833240300CF83EE /* playerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25564676279DB11F0043C427 /* playerImage.swift */; };
+		5222BA482833240300CF83EE /* outlineSceneGraphNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA949E3D275A5B750097B5E4 /* outlineSceneGraphNode.swift */; };
+		5222BA492833240300CF83EE /* viewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52742A6027D2E405005885C8 /* viewModels.swift */; };
+		5222BA4A2833240300CF83EE /* passThroughWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA89C3E12758E6D500001725 /* passThroughWindow.swift */; };
+		5222BA4B2833241000CF83EE /* golfShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529A00D327F7A8D300FE726B /* golfShot.swift */; };
+		5222BA4C2833241000CF83EE /* golfViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52742A5C27D2D137005885C8 /* golfViewModels.swift */; };
+		5222BA4D2833241000CF83EE /* golfSmallGreenPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254370C627A5451000D6CCDD /* golfSmallGreenPlayerCard.swift */; };
+		5222BA4E2833241000CF83EE /* golfSmallTeeBoxPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254370CA27A5527800D6CCDD /* golfSmallTeeBoxPlayerCard.swift */; };
+		5222BA4F2833241000CF83EE /* golfBigTeeBoxPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15102F91279C103C0056D61D /* golfBigTeeBoxPlayerCard.swift */; };
+		5222BA502833241000CF83EE /* golfGreenModelPlayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1540D2FD27B088E3007A8911 /* golfGreenModelPlayerData.swift */; };
+		5222BA512833241000CF83EE /* golfVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03DB9B274DFCE700AF17BC /* golfVenue.swift */; };
+		5222BA522833241000CF83EE /* golfFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E717FE27B10C7100DE23FB /* golfFlag.swift */; };
+		5222BA542833241000CF83EE /* golfPlayerTeeboxAssociatedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15102FA1279C12830056D61D /* golfPlayerTeeboxAssociatedData.swift */; };
+		5222BA552833241000CF83EE /* golfGreenPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254370D027A58B6500D6CCDD /* golfGreenPlayerCard.swift */; };
+		5222BA562833241000CF83EE /* golfExperienceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C3DF8279EBEF00095A6C4 /* golfExperienceConfig.swift */; };
+		5222BA572833241000CF83EE /* golfPlayerGreenAssociatedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15102FA2279C12830056D61D /* golfPlayerGreenAssociatedData.swift */; };
+		5222BA582833241000CF83EE /* golfGreenModelPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F134F527B25D23000F8F46 /* golfGreenModelPlayerCard.swift */; };
+		5222BA592833241000CF83EE /* golfTeeBoxPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254370CE27A5569C00D6CCDD /* golfTeeBoxPlayerCard.swift */; };
+		5222BA5A2833241000CF83EE /* golfBigGreenPlayerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15102F9F279C11B30056D61D /* golfBigGreenPlayerCard.swift */; };
+		5222BA5B2833241000CF83EE /* golfGreenContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253412A827B065A2002F6910 /* golfGreenContainer.swift */; };
+		5222BA5C2833241600CF83EE /* basketballViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221826127D920D00071C856 /* basketballViewModels.swift */; };
+		5222BA5D2833241600CF83EE /* basketballExperienceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272242F27DB23D600B3A5A0 /* basketballExperienceConfig.swift */; };
+		5222BA5E2833241600CF83EE /* basketballLegendBoardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E400E279686C20002D6D3 /* basketballLegendBoardNode.swift */; };
+		5222BA5F2833241600CF83EE /* basketballFloorTileSceneGraphNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA650F70278D810D00DBEA0F /* basketballFloorTileSceneGraphNode.swift */; };
+		5222BA602833241600CF83EE /* basketballPlayerCardBoardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92BF0927EF47F2003746D5 /* basketballPlayerCardBoardNode.swift */; };
+		5222BA612833241600CF83EE /* basketballTeamLeaderBoardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38187E427E31BB500EB86FA /* basketballTeamLeaderBoardNode.swift */; };
+		5222BA622833241600CF83EE /* teamPlayerImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = F38187F927E3352F00EB86FA /* teamPlayerImage.xib */; };
+		5222BA632833241600CF83EE /* basketballHeatMapSceneGraphNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D51143427B3FA8C00A6F7DA /* basketballHeatMapSceneGraphNode.swift */; };
+		5222BA642833241600CF83EE /* basketballCourtsideBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52148C68282A1F1F0049B6B1 /* basketballCourtsideBoard.swift */; };
+		5222BA652833241C00CF83EE /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25564679279DB1E30043C427 /* UIView+Extensions.swift */; };
+		5222BA662833241C00CF83EE /* SCN+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AE7812279C2A0D00B136D7 /* SCN+Extensions.swift */; };
+		5222BA672833241C00CF83EE /* ObjectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15102FA9279C14090056D61D /* ObjectFactory.swift */; };
+		5222BA682833241C00CF83EE /* (null) in Sources */ = {isa = PBXBuildFile; };
+		5222BA6B2833241C00CF83EE /* simd+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AE7813279C2A0D00B136D7 /* simd+Extensions.swift */; };
+		5222BA6C2833241C00CF83EE /* CIImage+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA069BBB2756013E003DFAF0 /* CIImage+Extention.swift */; };
+		5222BA6E283324E200CF83EE /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B891C528330F720056F759 /* libc++.tbd */; };
+		5228EF8228651E1400A10BD0 /* httpModelDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4723B283FF1CE006C4C11 /* httpModelDownloader.swift */; };
+		5228EF8328651E1400A10BD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2556467B279DB4B10043C427 /* Assets.xcassets */; };
+		5228EF8428651E1400A10BD0 /* modelDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4723A283FF1CE006C4C11 /* modelDownloader.swift */; };
+		5228EF8528651E1800A10BD0 /* playerImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25564675279DB11F0043C427 /* playerImage.xib */; };
+		5228EF8628651E1800A10BD0 /* Flag.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 02E7180227B122EB00DE23FB /* Flag.usdz */; };
+		5228EF8728651E2100A10BD0 /* qEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E47238283FEBF5006C4C11 /* qEntity.swift */; };
+		52564A2027DD2CEA00C12CA2 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52564A1F27DD2CEA00C12CA2 /* UIImage+Extension.swift */; };
+		5272243027DB23D600B3A5A0 /* basketballExperienceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272242F27DB23D600B3A5A0 /* basketballExperienceConfig.swift */; };
+		5272243227DBBE4000B3A5A0 /* sportExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272243127DBBE4000B3A5A0 /* sportExperience.swift */; };
+		52742A5D27D2D137005885C8 /* golfViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52742A5C27D2D137005885C8 /* golfViewModels.swift */; };
+		52742A6127D2E405005885C8 /* viewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52742A6027D2E405005885C8 /* viewModels.swift */; };
+		529A00D427F7A8D300FE726B /* golfShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529A00D327F7A8D300FE726B /* golfShot.swift */; };
+		52C07E1B27C98E4300FE1E58 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C07E1A27C98E4300FE1E58 /* constants.swift */; };
+		52E47239283FEBF5006C4C11 /* qEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E47238283FEBF5006C4C11 /* qEntity.swift */; };
+		52E4723C283FF1CE006C4C11 /* modelDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4723A283FF1CE006C4C11 /* modelDownloader.swift */; };
+		52E4723D283FF1CE006C4C11 /* httpModelDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4723B283FF1CE006C4C11 /* httpModelDownloader.swift */; };
+		52E94E92285121B20001B6C2 /* experienceWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E94E90285121B20001B6C2 /* experienceWrapper.swift */; };
+		AA03DB9C274DFCE700AF17BC /* golfVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03DB9B274DFCE700AF17BC /* golfVenue.swift */; };
+		AA069BBC2756013E003DFAF0 /* CIImage+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA069BBB2756013E003DFAF0 /* CIImage+Extention.swift */; };
+		AA101FA52771BFD400E20F5F /* Notification.Name+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA101FA42771BFD400E20F5F /* Notification.Name+Extensions.swift */; };
+		AA39B166274CC966001F8DC7 /* arUiViewUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA39B165274CC965001F8DC7 /* arUiViewUpdate.swift */; };
+		AA56C3692747856B00857309 /* Q_ui.h in Headers */ = {isa = PBXBuildFile; fileRef = AA56C35B2747856A00857309 /* Q_ui.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA56C3762747ABEE00857309 /* arUiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA56C3752747ABEE00857309 /* arUiViewController.swift */; };
+		AA650F71278D810D00DBEA0F /* basketballFloorTileSceneGraphNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA650F70278D810D00DBEA0F /* basketballFloorTileSceneGraphNode.swift */; };
+		AA89C3E32758E6D500001725 /* passThroughWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA89C3E12758E6D500001725 /* passThroughWindow.swift */; };
+		AA949E3E275A5B750097B5E4 /* outlineSceneGraphNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA949E3D275A5B750097B5E4 /* outlineSceneGraphNode.swift */; };
+		AACB826A2750B7A700A487C9 /* arUiViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB82652750B7A700A487C9 /* arUiViewConfig.swift */; };
+		F38187E527E31BB500EB86FA /* basketballTeamLeaderBoardNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38187E427E31BB500EB86FA /* basketballTeamLeaderBoardNode.swift */; };
+		F38187F827E334C200EB86FA /* teamPlayerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38187F727E334C200EB86FA /* teamPlayerImage.swift */; };
+		F38187FA27E3352F00EB86FA /* teamPlayerImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = F38187F927E3352F00EB86FA /* teamPlayerImage.xib */; };
+		FE6616EA28B7F908005AF760 /* flagImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6616E928B7F908005AF760 /* flagImage.xib */; };
+		FE6616EC28B7F948005AF760 /* flagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6616EB28B7F948005AF760 /* flagImage.swift */; };
+		FE7A7DD328D0B538003B8178 /* golfApexCardEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A7DD128D0B538003B8178 /* golfApexCardEntity.swift */; };
+		FE7A7DD428D0B538003B8178 /* golfApexCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A7DD228D0B538003B8178 /* golfApexCard.swift */; };
+		FED1677628E41843001A8DF1 /* golfApexCardEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A7DD128D0B538003B8178 /* golfApexCardEntity.swift */; };
+		FED1677728E41847001A8DF1 /* golfApexCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A7DD228D0B538003B8178 /* golfApexCard.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5222BA39283322EB00CF83EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA56C34F2747856A00857309 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA56C3572747856A00857309;
+			remoteInfo = Q.ui;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0252E22C27B64134001F4384 /* UIColor+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extention.swift"; sourceTree = "<group>"; };
+		02E717FE27B10C7100DE23FB /* golfFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = golfFlag.swift; sourceTree = "<group>"; };
+		02E7180227B122EB00DE23FB /* Flag.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Flag.usdz; sourceTree = "<group>"; };
+		02F134F527B25D23000F8F46 /* golfGreenModelPlayerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = golfGreenModelPlayerCard.swift; sourceTree = "<group>"; };
+		15102F8C279C0FFA0056D61D /* sceneGraphNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sceneGraphNode.swift; sourceTree = "<group>"; };
+		15102F91279C103C0056D61D /* golfBigTeeBoxPlayerCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = golfBigTeeBoxPlayerCard.swift; sourceTree = "<group>"; };
+		15102F9F279C11B30056D61D /* golfBigGreenPlayerCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = golfBigGreenPlayerCard.swift; sourceTree = "<group>"; };
+		15102FA1279C12830056D61D /* golfPlayerTeeboxAssociatedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = golfPlayerTeeboxAssociatedData.swift; sourceTree = "<group>"; };
+		15102FA2279C12830056D61D /* golfPlayerGreenAssociatedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = golfPlayerGreenAssociatedData.swift; sourceTree = "<group>"; };
+		15102FA5279C13670056D61D /* ballPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ballPath.swift; sourceTree = "<group>"; };
+		15102FA9279C14090056D61D /* ObjectFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectFactory.swift; sourceTree = "<group>"; };
+		1540D2FD27B088E3007A8911 /* golfGreenModelPlayerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = golfGreenModelPlayerData.swift; sourceTree = "<group>"; };
+		15AE7812279C2A0D00B136D7 /* SCN+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCN+Extensions.swift"; sourceTree = "<group>"; };
+		15AE7813279C2A0D00B136D7 /* simd+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "simd+Extensions.swift"; sourceTree = "<group>"; };
+		253412A827B065A2002F6910 /* golfGreenContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = golfGreenContainer.swift; sourceTree = "<group>"; };
+		254370C627A5451000D6CCDD /* golfSmallGreenPlayerCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = golfSmallGreenPlayerCard.swift; sourceTree = "<group>"; };
+		254370CA27A5527800D6CCDD /* golfSmallTeeBoxPlayerCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = golfSmallTeeBoxPlayerCard.swift; sourceTree = "<group>"; };
+		254370CE27A5569C00D6CCDD /* golfTeeBoxPlayerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = golfTeeBoxPlayerCard.swift; sourceTree = "<group>"; };
+		254370D027A58B6500D6CCDD /* golfGreenPlayerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = golfGreenPlayerCard.swift; sourceTree = "<group>"; };
+		25564675279DB11F0043C427 /* playerImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = playerImage.xib; sourceTree = "<group>"; };
+		25564676279DB11F0043C427 /* playerImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playerImage.swift; sourceTree = "<group>"; };
+		25564679279DB1E30043C427 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		2556467B279DB4B10043C427 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		255E5FA1277D9438009AFA00 /* venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = venue.swift; sourceTree = "<group>"; };
+		3060A29F27A3B5A600E15291 /* path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = path.swift; sourceTree = "<group>"; };
+		308E400E279686C20002D6D3 /* basketballLegendBoardNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basketballLegendBoardNode.swift; sourceTree = "<group>"; };
+		4D51143427B3FA8C00A6F7DA /* basketballHeatMapSceneGraphNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = basketballHeatMapSceneGraphNode.swift; sourceTree = "<group>"; };
+		4D6C3DF8279EBEF00095A6C4 /* golfExperienceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = golfExperienceConfig.swift; sourceTree = "<group>"; };
+		4D84FF68277CCC68004530E0 /* basketballVenue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = basketballVenue.swift; sourceTree = "<group>"; };
+		4D92BF0927EF47F2003746D5 /* basketballPlayerCardBoardNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = basketballPlayerCardBoardNode.swift; sourceTree = "<group>"; };
+		4E0FA60B28E2D4EA0011A223 /* golfGreenPlayerCardBaseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = golfGreenPlayerCardBaseEntity.swift; sourceTree = "<group>"; };
+		521108D2286626A9009E36A8 /* testHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testHelper.swift; sourceTree = "<group>"; };
+		52148C68282A1F1F0049B6B1 /* basketballCourtsideBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basketballCourtsideBoard.swift; sourceTree = "<group>"; };
+		52148C6B282C0FBA0049B6B1 /* basketballTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basketballTests.swift; sourceTree = "<group>"; };
+		52148C7F282C12750049B6B1 /* Q_uiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Q_uiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5221826127D920D00071C856 /* basketballViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basketballViewModels.swift; sourceTree = "<group>"; };
+		52564A1F27DD2CEA00C12CA2 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		5272242F27DB23D600B3A5A0 /* basketballExperienceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basketballExperienceConfig.swift; sourceTree = "<group>"; };
+		5272243127DBBE4000B3A5A0 /* sportExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sportExperience.swift; sourceTree = "<group>"; };
+		52742A5C27D2D137005885C8 /* golfViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = golfViewModels.swift; sourceTree = "<group>"; };
+		52742A6027D2E405005885C8 /* viewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewModels.swift; sourceTree = "<group>"; };
+		529A00D327F7A8D300FE726B /* golfShot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = golfShot.swift; sourceTree = "<group>"; };
+		52B891C528330F720056F759 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
+		52C07E1A27C98E4300FE1E58 /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		52E47238283FEBF5006C4C11 /* qEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = qEntity.swift; sourceTree = "<group>"; };
+		52E4723A283FF1CE006C4C11 /* modelDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = modelDownloader.swift; sourceTree = "<group>"; };
+		52E4723B283FF1CE006C4C11 /* httpModelDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = httpModelDownloader.swift; sourceTree = "<group>"; };
+		52E94E90285121B20001B6C2 /* experienceWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = experienceWrapper.swift; sourceTree = "<group>"; };
+		52ED20132832E7FF00AC3B6B /* Q.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Q.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA03DB9B274DFCE700AF17BC /* golfVenue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = golfVenue.swift; sourceTree = "<group>"; };
+		AA069BBB2756013E003DFAF0 /* CIImage+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CIImage+Extention.swift"; sourceTree = "<group>"; };
+		AA101FA42771BFD400E20F5F /* Notification.Name+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification.Name+Extensions.swift"; sourceTree = "<group>"; };
+		AA39B165274CC965001F8DC7 /* arUiViewUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arUiViewUpdate.swift; sourceTree = "<group>"; };
+		AA56C3582747856A00857309 /* Q_ui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Q_ui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA56C35B2747856A00857309 /* Q_ui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Q_ui.h; sourceTree = "<group>"; };
+		AA56C35C2747856A00857309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA56C3752747ABEE00857309 /* arUiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arUiViewController.swift; sourceTree = "<group>"; };
+		AA650F70278D810D00DBEA0F /* basketballFloorTileSceneGraphNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basketballFloorTileSceneGraphNode.swift; sourceTree = "<group>"; };
+		AA89C3E12758E6D500001725 /* passThroughWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = passThroughWindow.swift; sourceTree = "<group>"; };
+		AA949E3D275A5B750097B5E4 /* outlineSceneGraphNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = outlineSceneGraphNode.swift; sourceTree = "<group>"; };
+		AACB82652750B7A700A487C9 /* arUiViewConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = arUiViewConfig.swift; sourceTree = "<group>"; };
+		F38187E427E31BB500EB86FA /* basketballTeamLeaderBoardNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = basketballTeamLeaderBoardNode.swift; sourceTree = "<group>"; };
+		F38187F727E334C200EB86FA /* teamPlayerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teamPlayerImage.swift; sourceTree = "<group>"; };
+		F38187F927E3352F00EB86FA /* teamPlayerImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = teamPlayerImage.xib; sourceTree = "<group>"; };
+		FE6616E928B7F908005AF760 /* flagImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = flagImage.xib; sourceTree = "<group>"; };
+		FE6616EB28B7F948005AF760 /* flagImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flagImage.swift; sourceTree = "<group>"; };
+		FE7A7DD128D0B538003B8178 /* golfApexCardEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = golfApexCardEntity.swift; sourceTree = "<group>"; };
+		FE7A7DD228D0B538003B8178 /* golfApexCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = golfApexCard.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52148C7C282C12750049B6B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5222BA6E283324E200CF83EE /* libc++.tbd in Frameworks */,
+				52148C83282C12750049B6B1 /* Q_ui.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA56C3552747856A00857309 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5220052F2836991300B1D029 /* Q.framework in Frameworks */,
+				5220052C2836919200B1D029 /* libc++.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15102F8B279C0FF00056D61D /* golf */ = {
+			isa = PBXGroup;
+			children = (
+				FE7A7DD228D0B538003B8178 /* golfApexCard.swift */,
+				FE7A7DD128D0B538003B8178 /* golfApexCardEntity.swift */,
+				25564675279DB11F0043C427 /* playerImage.xib */,
+				02E7180227B122EB00DE23FB /* Flag.usdz */,
+				AA03DB9B274DFCE700AF17BC /* golfVenue.swift */,
+				4D6C3DF8279EBEF00095A6C4 /* golfExperienceConfig.swift */,
+				52742A5C27D2D137005885C8 /* golfViewModels.swift */,
+				254370C627A5451000D6CCDD /* golfSmallGreenPlayerCard.swift */,
+				15102F9F279C11B30056D61D /* golfBigGreenPlayerCard.swift */,
+				254370D027A58B6500D6CCDD /* golfGreenPlayerCard.swift */,
+				254370CA27A5527800D6CCDD /* golfSmallTeeBoxPlayerCard.swift */,
+				15102F91279C103C0056D61D /* golfBigTeeBoxPlayerCard.swift */,
+				254370CE27A5569C00D6CCDD /* golfTeeBoxPlayerCard.swift */,
+				02F134F527B25D23000F8F46 /* golfGreenModelPlayerCard.swift */,
+				1540D2FD27B088E3007A8911 /* golfGreenModelPlayerData.swift */,
+				253412A827B065A2002F6910 /* golfGreenContainer.swift */,
+				15102FA2279C12830056D61D /* golfPlayerGreenAssociatedData.swift */,
+				15102FA1279C12830056D61D /* golfPlayerTeeboxAssociatedData.swift */,
+				02E717FE27B10C7100DE23FB /* golfFlag.swift */,
+				529A00D327F7A8D300FE726B /* golfShot.swift */,
+				FE6616E928B7F908005AF760 /* flagImage.xib */,
+				4E0FA60B28E2D4EA0011A223 /* golfGreenPlayerCardBaseEntity.swift */,
+			);
+			path = golf;
+			sourceTree = "<group>";
+		};
+		52148C6A282C0F830049B6B1 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				52148C6B282C0FBA0049B6B1 /* basketballTests.swift */,
+				521108D2286626A9009E36A8 /* testHelper.swift */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		5222BA38283322E900CF83EE /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				52B891C528330F720056F759 /* libc++.tbd */,
+				52ED20132832E7FF00AC3B6B /* Q.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		5222BA6D283324E200CF83EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52E94E8E285121B20001B6C2 /* xw */ = {
+			isa = PBXGroup;
+			children = (
+				52E94E90285121B20001B6C2 /* experienceWrapper.swift */,
+			);
+			path = xw;
+			sourceTree = "<group>";
+		};
+		AA56C34E2747856A00857309 = {
+			isa = PBXGroup;
+			children = (
+				52E94E8E285121B20001B6C2 /* xw */,
+				AA56C35A2747856A00857309 /* Q.ui */,
+				AA56C3592747856A00857309 /* Products */,
+				5222BA38283322E900CF83EE /* Recovered References */,
+				5222BA6D283324E200CF83EE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AA56C3592747856A00857309 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA56C3582747856A00857309 /* Q_ui.framework */,
+				52148C7F282C12750049B6B1 /* Q_uiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA56C35A2747856A00857309 /* Q.ui */ = {
+			isa = PBXGroup;
+			children = (
+				52E4723B283FF1CE006C4C11 /* httpModelDownloader.swift */,
+				52E4723A283FF1CE006C4C11 /* modelDownloader.swift */,
+				5272243127DBBE4000B3A5A0 /* sportExperience.swift */,
+				52C07E1A27C98E4300FE1E58 /* constants.swift */,
+				3060A29F27A3B5A600E15291 /* path.swift */,
+				15102FA5279C13670056D61D /* ballPath.swift */,
+				AA89C3E12758E6D500001725 /* passThroughWindow.swift */,
+				AA39B165274CC965001F8DC7 /* arUiViewUpdate.swift */,
+				AACB82652750B7A700A487C9 /* arUiViewConfig.swift */,
+				AA56C3752747ABEE00857309 /* arUiViewController.swift */,
+				255E5FA1277D9438009AFA00 /* venue.swift */,
+				AA101FA42771BFD400E20F5F /* Notification.Name+Extensions.swift */,
+				AA949E3D275A5B750097B5E4 /* outlineSceneGraphNode.swift */,
+				52742A6027D2E405005885C8 /* viewModels.swift */,
+				15102F8C279C0FFA0056D61D /* sceneGraphNode.swift */,
+				FE6616EB28B7F948005AF760 /* flagImage.swift */,
+				25564676279DB11F0043C427 /* playerImage.swift */,
+				F38187F727E334C200EB86FA /* teamPlayerImage.swift */,
+				0252E22C27B64134001F4384 /* UIColor+Extention.swift */,
+				52564A1F27DD2CEA00C12CA2 /* UIImage+Extension.swift */,
+				2556467B279DB4B10043C427 /* Assets.xcassets */,
+				15102F8B279C0FF00056D61D /* golf */,
+				AACB82642750B7A700A487C9 /* basketball */,
+				AAC9556C274BBAC900A7976A /* internal */,
+				52148C6A282C0F830049B6B1 /* test */,
+				AA56C35B2747856A00857309 /* Q_ui.h */,
+				AA56C35C2747856A00857309 /* Info.plist */,
+			);
+			path = Q.ui;
+			sourceTree = "<group>";
+		};
+		AAC9556C274BBAC900A7976A /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				52E47238283FEBF5006C4C11 /* qEntity.swift */,
+				15AE7813279C2A0D00B136D7 /* simd+Extensions.swift */,
+				15AE7812279C2A0D00B136D7 /* SCN+Extensions.swift */,
+				AA069BBB2756013E003DFAF0 /* CIImage+Extention.swift */,
+				25564679279DB1E30043C427 /* UIView+Extensions.swift */,
+				15102FA9279C14090056D61D /* ObjectFactory.swift */,
+			);
+			path = internal;
+			sourceTree = "<group>";
+		};
+		AACB82642750B7A700A487C9 /* basketball */ = {
+			isa = PBXGroup;
+			children = (
+				5272242F27DB23D600B3A5A0 /* basketballExperienceConfig.swift */,
+				4D84FF68277CCC68004530E0 /* basketballVenue.swift */,
+				4D51143427B3FA8C00A6F7DA /* basketballHeatMapSceneGraphNode.swift */,
+				AA650F70278D810D00DBEA0F /* basketballFloorTileSceneGraphNode.swift */,
+				4D92BF0927EF47F2003746D5 /* basketballPlayerCardBoardNode.swift */,
+				F38187E427E31BB500EB86FA /* basketballTeamLeaderBoardNode.swift */,
+				308E400E279686C20002D6D3 /* basketballLegendBoardNode.swift */,
+				5221826127D920D00071C856 /* basketballViewModels.swift */,
+				F38187F927E3352F00EB86FA /* teamPlayerImage.xib */,
+				52148C68282A1F1F0049B6B1 /* basketballCourtsideBoard.swift */,
+			);
+			path = basketball;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AA56C3532747856A00857309 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA56C3692747856B00857309 /* Q_ui.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		52148C7E282C12750049B6B1 /* Q_uiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52148C86282C12750049B6B1 /* Build configuration list for PBXNativeTarget "Q_uiTests" */;
+			buildPhases = (
+				52148C7B282C12750049B6B1 /* Sources */,
+				52148C7C282C12750049B6B1 /* Frameworks */,
+				52148C7D282C12750049B6B1 /* Resources */,
+				521108D428662F9A009E36A8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52148C85282C12750049B6B1 /* PBXTargetDependency */,
+			);
+			name = Q_uiTests;
+			productName = Q_uiTests;
+			productReference = 52148C7F282C12750049B6B1 /* Q_uiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AA56C3572747856A00857309 /* Q.ui */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA56C36C2747856B00857309 /* Build configuration list for PBXNativeTarget "Q.ui" */;
+			buildPhases = (
+				AA56C3532747856A00857309 /* Headers */,
+				AA56C3542747856A00857309 /* Sources */,
+				AA56C3552747856A00857309 /* Frameworks */,
+				AA56C3562747856A00857309 /* Resources */,
+				5282E190278CF997002EC21E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Q.ui;
+			packageProductDependencies = (
+			);
+			productName = Q.ui;
+			productReference = AA56C3582747856A00857309 /* Q_ui.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA56C34F2747856A00857309 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					52148C7E282C12750049B6B1 = {
+						CreatedOnToolsVersion = 13.2;
+					};
+					AA56C3572747856A00857309 = {
+						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
+					};
+				};
+			};
+			buildConfigurationList = AA56C3522747856A00857309 /* Build configuration list for PBXProject "Q.ui" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA56C34E2747856A00857309;
+			packageReferences = (
+			);
+			productRefGroup = AA56C3592747856A00857309 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA56C3572747856A00857309 /* Q.ui */,
+				52148C7E282C12750049B6B1 /* Q_uiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52148C7D282C12750049B6B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5228EF8328651E1400A10BD0 /* Assets.xcassets in Resources */,
+				5228EF8528651E1800A10BD0 /* playerImage.xib in Resources */,
+				5222BA622833241600CF83EE /* teamPlayerImage.xib in Resources */,
+				5228EF8628651E1800A10BD0 /* Flag.usdz in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA56C3562747856A00857309 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F38187FA27E3352F00EB86FA /* teamPlayerImage.xib in Resources */,
+				25564677279DB11F0043C427 /* playerImage.xib in Resources */,
+				02E7180327B122EB00DE23FB /* Flag.usdz in Resources */,
+				2556467C279DB4B20043C427 /* Assets.xcassets in Resources */,
+				FE6616EA28B7F908005AF760 /* flagImage.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		521108D428662F9A009E36A8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${SRCROOT}/../Q_ui.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"copying '${BUILT_PRODUCTS_DIR}/Q_ui.framework' to output\"\nrm -rf ${SRCROOT}/../Q_ui.framework\ncp -f -R ${BUILT_PRODUCTS_DIR}/Q_ui.framework ${SRCROOT}/../\n";
+		};
+		5282E190278CF997002EC21E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${SRCROOT}/../Q_ui.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"copying '${BUILT_PRODUCTS_DIR}/Q_ui.framework' to output\"\nrm -rf ${SRCROOT}/../Q_ui.framework\ncp -f -R ${BUILT_PRODUCTS_DIR}/Q_ui.framework ${SRCROOT}/../\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52148C7B282C12750049B6B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5222BA482833240300CF83EE /* outlineSceneGraphNode.swift in Sources */,
+				5222BA502833241000CF83EE /* golfGreenModelPlayerData.swift in Sources */,
+				5222BA5E2833241600CF83EE /* basketballLegendBoardNode.swift in Sources */,
+				5222BA592833241000CF83EE /* golfTeeBoxPlayerCard.swift in Sources */,
+				5222BA612833241600CF83EE /* basketballTeamLeaderBoardNode.swift in Sources */,
+				5222BA6C2833241C00CF83EE /* CIImage+Extention.swift in Sources */,
+				5222BA462833240300CF83EE /* arUiViewUpdate.swift in Sources */,
+				5222BA522833241000CF83EE /* golfFlag.swift in Sources */,
+				5222BA412833240300CF83EE /* path.swift in Sources */,
+				FED1677728E41847001A8DF1 /* golfApexCard.swift in Sources */,
+				5222BA452833240300CF83EE /* UIImage+Extension.swift in Sources */,
+				5222BA4E2833241000CF83EE /* golfSmallTeeBoxPlayerCard.swift in Sources */,
+				52148C89282C127A0049B6B1 /* basketballTests.swift in Sources */,
+				5222BA652833241C00CF83EE /* UIView+Extensions.swift in Sources */,
+				52148C8A282C13AD0049B6B1 /* basketballVenue.swift in Sources */,
+				5222BA422833240300CF83EE /* ballPath.swift in Sources */,
+				5222BA4F2833241000CF83EE /* golfBigTeeBoxPlayerCard.swift in Sources */,
+				5222BA402833240300CF83EE /* constants.swift in Sources */,
+				5228EF8728651E2100A10BD0 /* qEntity.swift in Sources */,
+				5228EF8428651E1400A10BD0 /* modelDownloader.swift in Sources */,
+				5222BA4D2833241000CF83EE /* golfSmallGreenPlayerCard.swift in Sources */,
+				5222BA572833241000CF83EE /* golfPlayerGreenAssociatedData.swift in Sources */,
+				5222BA442833240300CF83EE /* sceneGraphNode.swift in Sources */,
+				5222BA432833240300CF83EE /* venue.swift in Sources */,
+				5222BA672833241C00CF83EE /* ObjectFactory.swift in Sources */,
+				5222BA5D2833241600CF83EE /* basketballExperienceConfig.swift in Sources */,
+				5222BA682833241C00CF83EE /* (null) in Sources */,
+				5222BA3C2833240300CF83EE /* UIColor+Extention.swift in Sources */,
+				5222BA5B2833241000CF83EE /* golfGreenContainer.swift in Sources */,
+				5222BA3D2833240300CF83EE /* arUiViewConfig.swift in Sources */,
+				5222BA3B2833240300CF83EE /* Notification.Name+Extensions.swift in Sources */,
+				5222BA632833241600CF83EE /* basketballHeatMapSceneGraphNode.swift in Sources */,
+				5222BA5A2833241000CF83EE /* golfBigGreenPlayerCard.swift in Sources */,
+				5222BA562833241000CF83EE /* golfExperienceConfig.swift in Sources */,
+				5222BA642833241600CF83EE /* basketballCourtsideBoard.swift in Sources */,
+				5222BA472833240300CF83EE /* playerImage.swift in Sources */,
+				5222BA602833241600CF83EE /* basketballPlayerCardBoardNode.swift in Sources */,
+				5222BA492833240300CF83EE /* viewModels.swift in Sources */,
+				5222BA3E2833240300CF83EE /* arUiViewController.swift in Sources */,
+				5222BA5F2833241600CF83EE /* basketballFloorTileSceneGraphNode.swift in Sources */,
+				5222BA552833241000CF83EE /* golfGreenPlayerCard.swift in Sources */,
+				5222BA582833241000CF83EE /* golfGreenModelPlayerCard.swift in Sources */,
+				5222BA5C2833241600CF83EE /* basketballViewModels.swift in Sources */,
+				5222BA3A283323FE00CF83EE /* sportExperience.swift in Sources */,
+				5222BA6B2833241C00CF83EE /* simd+Extensions.swift in Sources */,
+				5228EF8228651E1400A10BD0 /* httpModelDownloader.swift in Sources */,
+				5222BA512833241000CF83EE /* golfVenue.swift in Sources */,
+				5222BA3F2833240300CF83EE /* teamPlayerImage.swift in Sources */,
+				5222BA4A2833240300CF83EE /* passThroughWindow.swift in Sources */,
+				5222BA4B2833241000CF83EE /* golfShot.swift in Sources */,
+				5222BA662833241C00CF83EE /* SCN+Extensions.swift in Sources */,
+				5222BA4C2833241000CF83EE /* golfViewModels.swift in Sources */,
+				FED1677628E41843001A8DF1 /* golfApexCardEntity.swift in Sources */,
+				5222BA542833241000CF83EE /* golfPlayerTeeboxAssociatedData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA56C3542747856A00857309 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE7A7DD428D0B538003B8178 /* golfApexCard.swift in Sources */,
+				1540D2FE27B088E3007A8911 /* golfGreenModelPlayerData.swift in Sources */,
+				4D6C3DF9279EBEF00095A6C4 /* golfExperienceConfig.swift in Sources */,
+				FE6616EC28B7F948005AF760 /* flagImage.swift in Sources */,
+				AA069BBC2756013E003DFAF0 /* CIImage+Extention.swift in Sources */,
+				253412A927B065A2002F6910 /* golfGreenContainer.swift in Sources */,
+				15102F8D279C0FFA0056D61D /* sceneGraphNode.swift in Sources */,
+				4D51143527B3FA8C00A6F7DA /* basketballHeatMapSceneGraphNode.swift in Sources */,
+				0252E22D27B64134001F4384 /* UIColor+Extention.swift in Sources */,
+				15102FAA279C14090056D61D /* ObjectFactory.swift in Sources */,
+				2556467A279DB1E30043C427 /* UIView+Extensions.swift in Sources */,
+				AA89C3E32758E6D500001725 /* passThroughWindow.swift in Sources */,
+				15AE7815279C2A0D00B136D7 /* simd+Extensions.swift in Sources */,
+				F38187F827E334C200EB86FA /* teamPlayerImage.swift in Sources */,
+				254370C727A5451000D6CCDD /* golfSmallGreenPlayerCard.swift in Sources */,
+				AA56C3762747ABEE00857309 /* arUiViewController.swift in Sources */,
+				15AE7814279C2A0D00B136D7 /* SCN+Extensions.swift in Sources */,
+				52742A6127D2E405005885C8 /* viewModels.swift in Sources */,
+				254370D127A58B6500D6CCDD /* golfGreenPlayerCard.swift in Sources */,
+				15102FA4279C12830056D61D /* golfPlayerGreenAssociatedData.swift in Sources */,
+				AA101FA52771BFD400E20F5F /* Notification.Name+Extensions.swift in Sources */,
+				52742A5D27D2D137005885C8 /* golfViewModels.swift in Sources */,
+				52148C69282A1F1F0049B6B1 /* basketballCourtsideBoard.swift in Sources */,
+				02E717FF27B10C7100DE23FB /* golfFlag.swift in Sources */,
+				FE7A7DD328D0B538003B8178 /* golfApexCardEntity.swift in Sources */,
+				52C07E1B27C98E4300FE1E58 /* constants.swift in Sources */,
+				52E4723D283FF1CE006C4C11 /* httpModelDownloader.swift in Sources */,
+				15102FA6279C13670056D61D /* ballPath.swift in Sources */,
+				254370CB27A5527800D6CCDD /* golfSmallTeeBoxPlayerCard.swift in Sources */,
+				5272243027DB23D600B3A5A0 /* basketballExperienceConfig.swift in Sources */,
+				52564A2027DD2CEA00C12CA2 /* UIImage+Extension.swift in Sources */,
+				AA949E3E275A5B750097B5E4 /* outlineSceneGraphNode.swift in Sources */,
+				AA650F71278D810D00DBEA0F /* basketballFloorTileSceneGraphNode.swift in Sources */,
+				5272243227DBBE4000B3A5A0 /* sportExperience.swift in Sources */,
+				52E47239283FEBF5006C4C11 /* qEntity.swift in Sources */,
+				15102F92279C103C0056D61D /* golfBigTeeBoxPlayerCard.swift in Sources */,
+				308E400F279686C20002D6D3 /* basketballLegendBoardNode.swift in Sources */,
+				AA39B166274CC966001F8DC7 /* arUiViewUpdate.swift in Sources */,
+				AA03DB9C274DFCE700AF17BC /* golfVenue.swift in Sources */,
+				F38187E527E31BB500EB86FA /* basketballTeamLeaderBoardNode.swift in Sources */,
+				5221826227D920D00071C856 /* basketballViewModels.swift in Sources */,
+				4D92BF0A27EF47F2003746D5 /* basketballPlayerCardBoardNode.swift in Sources */,
+				4E0FA60C28E2D4EA0011A223 /* golfGreenPlayerCardBaseEntity.swift in Sources */,
+				25564678279DB11F0043C427 /* playerImage.swift in Sources */,
+				255E5FA2277D9438009AFA00 /* venue.swift in Sources */,
+				3060A2A027A3B5A600E15291 /* path.swift in Sources */,
+				4D84FF69277CCC68004530E0 /* basketballVenue.swift in Sources */,
+				AACB826A2750B7A700A487C9 /* arUiViewConfig.swift in Sources */,
+				02F134F627B25D23000F8F46 /* golfGreenModelPlayerCard.swift in Sources */,
+				254370CF27A5569C00D6CCDD /* golfTeeBoxPlayerCard.swift in Sources */,
+				15102FA0279C11B30056D61D /* golfBigGreenPlayerCard.swift in Sources */,
+				15102FA3279C12830056D61D /* golfPlayerTeeboxAssociatedData.swift in Sources */,
+				52E4723C283FF1CE006C4C11 /* modelDownloader.swift in Sources */,
+				529A00D427F7A8D300FE726B /* golfShot.swift in Sources */,
+				52E94E92285121B20001B6C2 /* experienceWrapper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52148C85282C12750049B6B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = AA56C3572747856A00857309 /* Q.ui */;
+			targetProxy = 5222BA39283322EB00CF83EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		52148C87282C12750049B6B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8378HTK873;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/..";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ai.quintar.Q-uiTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52148C88282C12750049B6B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8378HTK873;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/..";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ai.quintar.Q-uiTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AA56C36A2747856B00857309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = armv7;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AA56C36B2747856B00857309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = armv7;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AA56C36D2747856B00857309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/..",
+					"$(PROJECT_DIR)/Q.ui",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"$(SRCROOT)/../ios/Q.xcarchive/Products/Library/Frameworks",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"$(inherited)",
+					"$(SRCROOT)/../simulator/Q.xcarchive/Products/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Q.ui/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Q.ui",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ai.quintar.Q.ui;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SKIP_INSTALL = NO;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA56C36E2747856B00857309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/..",
+					"$(PROJECT_DIR)/Q.ui",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"$(SRCROOT)/../ios/Q.xcarchive/Products/Library/Frameworks",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"$(inherited)",
+					"$(SRCROOT)/../simulator/Q.xcarchive/Products/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Q.ui/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Q.ui",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ai.quintar.Q.ui;
+				PRODUCT_NAME = Q_ui;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SKIP_INSTALL = NO;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52148C86282C12750049B6B1 /* Build configuration list for PBXNativeTarget "Q_uiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52148C87282C12750049B6B1 /* Debug */,
+				52148C88282C12750049B6B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA56C3522747856A00857309 /* Build configuration list for PBXProject "Q.ui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA56C36A2747856B00857309 /* Debug */,
+				AA56C36B2747856B00857309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA56C36C2747856B00857309 /* Build configuration list for PBXNativeTarget "Q.ui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA56C36D2747856B00857309 /* Debug */,
+				AA56C36E2747856B00857309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA56C34F2747856A00857309 /* Project object */;
+}

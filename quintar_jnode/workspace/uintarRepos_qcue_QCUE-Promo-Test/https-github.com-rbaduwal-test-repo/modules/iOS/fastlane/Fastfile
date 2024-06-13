@@ -1,0 +1,17 @@
+desc "Build the Q & Q.ui Frameworks"
+
+lane :framework do |options|
+   xcode_select("/Applications/Xcode_13.2.app")
+
+   build_app(
+    workspace: "./Q.reality.xcworkspace",
+    scheme: "Q.ui",
+    skip_package_ipa: true,
+    skip_archive: true,
+    skip_codesigning: true,
+    xcargs: "BITCODE_GENERATION_MODE=bitcode ENABLE_BITCODE=YES ONLY_ACTIVE_ARCH=YES", 
+    silent: true,
+    clean: true, 
+    include_bitcode: true,
+  )
+end
